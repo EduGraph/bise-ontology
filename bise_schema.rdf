@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:schema="http://schema.org/"
+         xmlns:ns0="http://akwi.de/ns/bise#">
+
+  <owl:Ontology rdf:about="http://akwi.de/ns/bise#">
+    <dc11:title>BISE Ontologie</dc11:title>
+    <rdfs:label xml:lang="de">bise Ontologie</rdfs:label>
+    <skos:prefLabel xml:lang="de">bise-Ontologie</skos:prefLabel>
+    <rdfs:comment xml:lang="de">Die BISE Ontologie ist eine Schema-Ontologie (T-Box) für den Studienführer Wirtschaftsinformatik an Fachhochschulen in der DACH-Region (StudyScout). Sie hat zum Ziel die Suche nach geeigneten Studiengängen im Hinblick auf Schwerpunkte des Studiums sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, zu unterstützen. Die Ontologie basiert zu weiten Teilen auf geeigneten Klassen und Properties des schema.org-Vokabulars. Die jeweilige Verwendung der Entitäten im Rahmen des StudyScout wird bei jeder Entität ausgeführt. StudyScout ist aktuell ein Forschungs- und Entwicklungsprojekt an der FH Brandenburg. Es wird unterstützt vom AKWI (Arbeitskreis Wirtschaftsinformatik an Fachhochschulen im deutschsprachigen Raum).	</rdfs:comment>
+    <owl:versionInfo xml:lang="de">v 0.4 - im Vergleich zu v 0.3 Optimierung im Hinblick auf automatische Dokumentation</owl:versionInfo>
+    <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-27</dc11:date>
+    <dc11:creator>Vera G. Meister</dc11:creator>
+    <dc11:rights>Diese Ontologie unterliegt der Creative Commons Attribuition Licence - http://creativecommons.org/licenses/by/3.0 .</dc11:rights>
+    <dc11:description>At the center of the ontology shall be put a conceptual class for the specific degree programs: BISEDegreeProgram. A reasonable good practice in ontology engineering is the reuse of standard vocabulary entries, as far as possible. When it comes to website annotation, the schema.org vocabulary is recommended. The central concept itself is too specific and, at least until now, not part of schema.org. But it represents obviously a kind of service provided by a university of applied sciences. Both classes: Service and CollegeOrUniversity are part of schema.org, as well as the object property provider. Since we are interested in explicating and analyzing such qualitative values of a specific BISE degree program, like the prevalence of certain BISE pillars and the provided qualifications for certain BISE job profiles, we shall define two other specific classes BISEPillar and BISEJobProfile, both as subclasses of schema:QualitativeValue and both referenced via the object property schema:valueReference. The relation between these classes can be modeled again as a standard object property, namely schema:educationRequirements. The classification as schema:QualitativeValue implies an enumeration type for both classes, i.e. they obtain a predefined number of instances, characterizing specific aspects of the service put in the center. The enumeration of instances are derived from relevant authorities, namely the German Association for Computer Science (Gesellschaft für Informatik) and the German Agency for Labor (Agentur für Arbeit). Further ontology elements, like shown in the figure below are easy to comprehend. Almost all of them are reused from schema.org.</dc11:description>
+    <dc11:description rdf:resource="https://cloud.githubusercontent.com/assets/12979822/10616550/eafb7f44-7765-11e5-9ec4-1e610bb0978b.png"/>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://schema.org/CollegeOrUniversity">
+    <rdfs:label>CollegeOrUniversity</rdfs:label>
+    <skos:prefLabel xml:lang="de">Hochschule</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">college or university</skos:prefLabel>
+    <skos:definition xml:lang="de">Eine Hochschule in der DACH-Region ist eine Fachhochschule, eine Universität oder eine andere höhere Bildungseinrichtung.</skos:definition>
+    <rdfs:comment xml:lang="de">Eine Hochschule in der DACH-Region ist eine Fachhochschule, eine Universität oder eine andere höhere Bildungseinrichtung. Diese Schema-Ontologie beschränkt sich auf Fachhochschulen in der DACH-Region, die Studiengänge der Wirtschaftsinformatik anbieten</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/Place">
+    <rdfs:label>Place</rdfs:label>
+    <skos:prefLabel xml:lang="de">Ort</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">place</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein Ding, dass eine zu einem gewissen Grade fixierte, physikalische Ausdehnung hat.</skos:definition>
+    <rdfs:comment xml:lang="de">Ein Place ist Ding, dass eine zu einem gewissen Grade fixierte, physikalische Ausdehnung hat. In dieser Ontology wird diese Klasse für die Abbildung der Hochschulstandorte verwendet.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/Service">
+    <rdfs:label>Service</rdfs:label>
+    <skos:prefLabel xml:lang="de">Dienst</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">service</skos:prefLabel>
+    <rdfs:comment xml:lang="de">Gegenstand dieser Ontologie sind Studiengänge der Wirtschaftsinformatik an Fachhochschulen in der DACH-Region. Diese können als Dienste dieser Einrichtungen angesehen werden.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/Rating">
+    <rdfs:comment>Rating</rdfs:comment>
+    <rdfs:label>Rating</rdfs:label>
+    <rdfs:comment xml:lang="de">In dieser Ontologie wird zunächst nur das CHE-Ranking abgebildet. Die Klasse Rating hat damit zunächst nur ein Individuum, kann aber natürlich bei Bedarf erweitert werden.</rdfs:comment>
+    <skos:prefLabel xml:lang="de">Rating</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">rating</skos:prefLabel>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/QualitativeValue">
+    <rdfs:label>QualitativeValue</rdfs:label>
+    <skos:prefLabel xml:lang="de">qualitativer Wert</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">qualitative value</skos:prefLabel>
+    <skos:definition xml:lang="de">Qualitative Werte erlauben die Beurteilung eines Produktes, Dienstes oder einer Entität im Hinblick auf wesentliche Werte oder Nutzungseigenschaften dieser Entität.</skos:definition>
+    <rdfs:comment xml:lang="de">Qualitative Werte erlauben die Beurteilung eines Produktes, Dienstes oder einer Entität im Hinblick auf wesentliche Werte oder Nutzungseigenschaften dieser Entität. In dieser Schema-Ontologie stehen Wirtschaftsinformatik-Studiengänge im Fokus. Die von der GI identifizierten drei Säulen der Wirtschaftsinformatik sowie die von der Agentur für Arbeit ausgewiesenen fünf Tätigkeitsprofile für Informatiker (inkl. Wirtschaftsinformatiker) werden als qualitative Werte angesehen. Diese Klassifikation deklariert die Elemente als Enumerationen - was hier offensichtlich passt, da jeweils eine vordefinierte Menge an Instanzen gegeben ist.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://akwi.de/ns/bise#DegreeProgram">
+    <rdfs:label>DegreeProgram</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Service"/>
+    <skos:prefLabel xml:lang="de">Studiengang</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">degree program</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein Studiengang ist ein komplexes, staatlich geordnetes und akkreditiertes akademisches Ausbildungsprogramm an einer Hochschule.</skos:definition>
+    <rdfs:comment xml:lang="de">Ein Studiengang ist ein komplexes, staatlich geordnetes und akkreditiertes akademisches Ausbildungsprogramm an einer Hochschule. Diese Schema-Ontlogie beschränkt sich auf die Studiengänge Wirtschaftsinformatik Bachelor und Master bzw. auf Studiengänge, die einen Schwerpunkt Wirtschaftsinformatik anbieten.</rdfs:comment>
+  </owl:Class>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#BISEBachelor">
+    <rdfs:subClassOf rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+    <rdfs:label>BISEBachelor</rdfs:label>
+    <skos:prefLabel xml:lang="de">Bachelor Wirtschaftsinformatik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">bachelor in Business &amp; Information Systems Engineering</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein Bachelor-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region.</skos:definition>
+    <rdfs:comment xml:lang="de">Ein Bachelor-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region.</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#BISEMaster">
+    <rdfs:subClassOf rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+    <rdfs:label>BISEMaster</rdfs:label>
+    <skos:prefLabel xml:lang="de">Master Wirtschaftsinformatik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">master in Business &amp; Information Systems Engineering</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein Master-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region.</skos:definition>
+    <rdfs:comment xml:lang="de">Ein Master-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region.</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#CSCMasterFocusBISE">
+    <rdfs:subClassOf rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+    <rdfs:label>CSCMasterFocusBISE</rdfs:label>
+    <skos:prefLabel xml:lang="de">Master Informatik mit Schwerpunkt Wirtschaftsinformatik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">master in Computer Science with focus on Business &amp; Information Systems Engineering</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein Master-Studiengang Informatik mit Schwerpunkt Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region.</skos:definition>
+    <rdfs:comment xml:lang="de">Ein Master-Studiengang Informatik mit Schwerpunkt Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region.</rdfs:comment>
+  </rdf:Description>
+
+  <owl:Class rdf:about="http://akwi.de/ns/bise#BISEJobProfile">
+    <rdfs:label>BISEJobProfile</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/QualitativeValue"/>
+    <skos:prefLabel xml:lang="de">Tätigkeitsprofil</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">job profile</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein Tätigkeitsprofil ist gekennzeichnet durch eine Gruppe von ähnlichen beruflichen Tätigkeiten, die einer Branche oder einem Fachgebiet zugeordnet werden können.</skos:definition>
+    <rdfs:comment xml:lang="de">Ein Tätigkeitsprofil ist gekennzeichnet durch eine Gruppe von ähnlichen beruflichen Tätigkeiten, die einer Branche oder einem Fachgebiet zugeordnet werden können. Diese Schema-Ontologie beschränkt sich auf die von der BA für Arbeit klassifizierten Tätigkeitsprofiler (Tätigkeitsprofile) für Informatiker: Informatik, Beratung, IT-Administration, Software-Entwicklung und IT-Management.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://akwi.de/ns/bise#BISEPillar">
+    <rdfs:label>BISEPillar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/QualitativeValue"/>
+    <skos:prefLabel xml:lang="de">Säule der Wirtschaftsinformatik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">main subject area of Business &amp; Information Systems Engineering</skos:prefLabel>
+    <skos:definition xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik.</skos:definition>
+    <rdfs:comment xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik.</rdfs:comment>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/provider">
+    <rdfs:label>provider</rdfs:label>
+    <skos:prefLabel xml:lang="de">hat Anbieter</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">has provider</skos:prefLabel>
+    <skos:definition xml:lang="de">Objektrelation zwischen einem Dienst und seinem Anbieter, hier zwischen einem Studiengang und der anbietenden Hochschule.</skos:definition>
+    <rdfs:comment xml:lang="de">Objektrelation zwischen einem Dienst und seinem Anbieter, hier zwischen einem Studiengang und der anbietenden Hochschule.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/location">
+    <rdfs:label>location</rdfs:label>
+    <skos:prefLabel xml:lang="de">Standort</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">location</skos:prefLabel>
+    <skos:definition xml:lang="de">Der bzw. ein Standort einer Organisation, einer Veranstaltung oder eines Vorgangs.</skos:definition>
+    <rdfs:comment xml:lang="de">Der bzw. ein Standort einer Organisation, einer Veranstaltung oder eines Vorgangs. Diese Standardrelation wird in dieser Ontologie verwendet, um den Standort des WI-Studiengangs an einer Hochschule darzustellen.</rdfs:comment>
+    <rdfs:range rdf:resource="http://schema.org/Place"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/geo">
+    <rdfs:label>geo</rdfs:label>
+    <skos:prefLabel xml:lang="de">Geodaten</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">geo data</skos:prefLabel>
+    <skos:definition xml:lang="de">Definiert einen leeren Knoten (Container) zur Aufnahme der Geodaten: longitude und latitude. Damit treten die beiden als zusammengehöriges Paar auf.</skos:definition>
+    <rdfs:comment xml:lang="de">Definiert einen leeren Knoten (Container) zur Aufnahme der Geodaten: longitude und latitude. Damit treten die beiden als zusammengehöriges Paar auf. Diese Standardrelation wird in dieser Ontologie verwendet, um den Standort des WI-Studiengangs an einer Hochschule zu adressieren.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://schema.org/Place"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/itemReviewed">
+    <rdfs:label>itemReviewed</rdfs:label>
+    <skos:prefLabel xml:lang="de">Gegenstand der Begutachtung</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">reviewed item</skos:prefLabel>
+    <skos:definition xml:lang="de">Gegenstand der einer spezifizierten Begutachtung (einem Rating oder einem Ranking) unterzogen wurde.</skos:definition>
+    <rdfs:comment xml:lang="de">Gegenstand der einer spezifizierten Begutachtung (einem Rating oder einem Ranking) unterzogen wurde. Diese Standardrelation wird in dieser Ontologie verwendet, um das Rating/Ranking eines WI-Studiengangs an einer Hochschule darzustellen.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://schema.org/Rating"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/educationRequirements">
+    <rdfs:label>educationRequirements</rdfs:label>
+    <rdfs:domain rdf:resource="http://akwi.de/ns/bise#BISEJobProfile"/>
+    <rdfs:range rdf:resource="http://akwi.de/ns/bise#BISEPillar"/>
+    <skos:prefLabel xml:lang="de">Bildungsvoraussetzungen</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">educational requirements</skos:prefLabel>
+    <rdfs:comment xml:lang="de">Objektrelation zur Darstellung des Mappings zwischen einem Tätigkeitsprofil der AA und einer Säule der Wirtschaftsinformatik (nach GI). Die Existenz eines solchen Mappings ist wie folgt zu interpretieren: die adressierte(n) Säule(n) der WI sind Bildungsvoraussetzungen für das betrachtete Tätigkeitsprofil.</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/valueReference">
+    <rdfs:label>valueReference</rdfs:label>
+    <rdfs:domain rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+    <rdfs:range rdf:resource="http://akwi.de/ns/bise#QualitativeValue"/>
+    <skos:prefLabel xml:lang="de">Verweis auf den Wert</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">value Reference</skos:prefLabel>
+    <rdfs:comment xml:lang="de">Diese Standardrelation wird verwendet, um die Eigenschaften eines Studienganges im Hinblick auf Schwerpunkte des Studiums sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, darzustellen.</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://schema.org/url">
+    <rdfs:label>url</rdfs:label>
+    <skos:prefLabel xml:lang="de">URL</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">url</skos:prefLabel>
+    <skos:definition xml:lang="de">Referenziert eine URL zu einer Ressource. Verweist auf weiterführende Informationen, Dokumente, Zugänge etc.</skos:definition>
+    <rdfs:comment xml:lang="de">Diese Standardrelation wird in dieser Ontologie verwendet, um die Internetseiten der Hochschulen sowie die Angebotswebseiten zu den relevanten Studiengängen zu referenzieren.</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://schema.org/latitude">
+    <rdfs:label>latitude</rdfs:label>
+    <skos:prefLabel xml:lang="de">geografische Breite</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">latitude</skos:prefLabel>
+    <skos:definition xml:lang="de">Die geografische Breite einer Ressource.</skos:definition>
+    <rdfs:comment xml:lang="de">Diese Standardrelation wird in dieser Ontologie verwendet, um die Geokoordinaten einer Hochschule darzustellen. Diese Standardrelation wird immer nur in Verbindung mit der Objektrelation schema:geo verwendet.</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://schema.org/longitude">
+    <rdfs:label>longitude</rdfs:label>
+    <skos:prefLabel xml:lang="de">geografische Länge</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">longitude</skos:prefLabel>
+    <skos:definition xml:lang="de">Die geografische Länge einer Ressource.</skos:definition>
+    <rdfs:comment xml:lang="de">Diese Standardrelation wird in dieser Ontologie verwendet, um die Geokoordinaten einer Hochschule darzustellen. Diese Standardrelation wird immer nur in Verbindung mit der Objektrelation schema:geo verwendet.</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://schema.org/ratingValue">
+    <rdfs:label>ratingValue</rdfs:label>
+    <skos:prefLabel xml:lang="de">Ratingwert</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">rating value</skos:prefLabel>
+    <skos:definition xml:lang="de">Ein numerischer oder alphanumerischer (klassifizierter) Wert eines im Rahmen eines Ratings begutachteten Gegenstandes.</skos:definition>
+    <rdfs:comment xml:lang="de">Diese Standardrelation wird in dieser Ontologie verwendet, um das Ranking einer Hochschule darzustellen.</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://akwi.de/ns/bise#stPeriodOfStudy">
+    <rdfs:label>stPeriodOfStudy</rdfs:label>
+    <skos:prefLabel xml:lang="de">Regelstudienzeit</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">standard period of study</skos:prefLabel>
+    <rdfs:comment>Dient der Darstellung der Regelstudienzeit eines Studiengangs in Semestern.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://akwi.de/ns/bise#cpECTS">
+    <rdfs:label>cpECTS</rdfs:label>
+    <skos:prefLabel xml:lang="de">Kreditpunkte nach ECTS</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">ECTS credit points</skos:prefLabel>
+    <rdfs:comment>Dient der Darstellung der ECTS-Punkte für einen Studiengang.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://akwi.de/ns/bise#DegreeProgram"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://akwi.de/ns/bise#jobMarketShare">
+    <rdfs:label>jobMarketShare</rdfs:label>
+    <skos:prefLabel xml:lang="de">Anteil am Arbeitsmarkt</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">job market share</skos:prefLabel>
+    <rdfs:domain rdf:resource="http://akwi.de/ns/bise#BISEJobProfile"/>
+    <rdfs:comment>Dient der Darstellung des Anteils eines Tätigkeitsprofils am Gesamtarbeitsmarkt für Informatiker. Basiert auf Daten der Agentur für Arbeit, Nürnberg.</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#PillarCSC">
+    <rdf:type rdf:resource="http://akwi.de/ns/bise#BISEPillar"/>
+    <skos:prefLabel xml:lang="de">Informatik-Säule</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">pillar: computer science</skos:prefLabel>
+    <skos:definition xml:lang="de">Die Informatik als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#PillarBAM">
+    <rdf:type rdf:resource="http://akwi.de/ns/bise#BISEPillar"/>
+    <skos:prefLabel xml:lang="de">BWL-Säule</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">pillar: business administration and management</skos:prefLabel>
+    <skos:definition xml:lang="de">Die BWL als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#PillarBIS">
+    <rdf:type rdf:resource="http://akwi.de/ns/bise#BISEPillar"/>
+    <skos:prefLabel xml:lang="de">WI-Säule</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">pillar: proper business &amp; information systems engineering</skos:prefLabel>
+    <skos:definition xml:lang="de">Die genuine Wirtschaftsinformatik als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://akwi.de/ns/bise#JobProfileINF">
+    <rdf:type rdf:resource="http://akwi.de/ns/bise#BISEJobProfile"/>
+    <skos:prefLabel xml:lang="de">Tätigkeitsprofil: Informatik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">JobProfile: informatics</skos:prefLabel>
+    <skos:definition xml:lang="de">Informatik (i.e.S.) als Tätigkeitsprofil umfasst die folgenden Tätigkeiten: Hard- und Softwarelösungen oder komplexen IT-Systeme konzipieren, erstellen, installieren, betreuen oder erforschen.</skos:definition>
+    <schema:educationRequirements rdf:resource="http://akwi.de/ns/bise#PillarCSC"/>
+    <ns0:jobMarketShare rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.31</ns0:jobMarketShare>
+  </rdf:Description>
+
+  <ns0:BISEJobProfile rdf:about="http://akwi.de/ns/bise#JobProfileCON">
+    <skos:prefLabel xml:lang="de">Tätigkeitsprofil: Beratung</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">JobProfile: consulting</skos:prefLabel>
+    <skos:definition xml:lang="de">Beratung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Systeme analysieren, Anwender beraten, IT-Produkte vertreiben.</skos:definition>
+    <schema:educationRequirements rdf:resource="http://akwi.de/ns/bise#PillarBAM"/>
+    <schema:educationRequirements rdf:resource="http://akwi.de/ns/bise#PillarBIS"/>
+    <ns0:jobMarketShare rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.22</ns0:jobMarketShare>
+  </ns0:BISEJobProfile>
+
+  <ns0:BISEJobProfile rdf:about="http://akwi.de/ns/bise#JobProfileADM">
+    <skos:prefLabel xml:lang="de">Tätigkeitsprofil: Administration</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">JobProfile: administration</skos:prefLabel>
+    <skos:definition xml:lang="de">Administration als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Netzwerke einrichten und betreuen; die IT von Unternehmen und Organisationen koordinieren und organisieren; IT-Systeme und Web-Anwendungen administrieren; Datenbanken einrichten und administrieren.</skos:definition>
+    <schema:educationRequirements rdf:resource="http://akwi.de/ns/bise#PillarCSC"/>
+    <schema:educationRequirements rdf:resource="http://akwi.de/ns/bise#PillarBIS"/>
+    <ns0:jobMarketShare rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.19</ns0:jobMarketShare>
+  </ns0:BISEJobProfile>
+
+  <ns0:BISEJobProfile rdf:about="http://akwi.de/ns/bise#JobProfileSWE">
+    <skos:prefLabel xml:lang="de">Tätigkeitsprofil: SW-Entwicklung</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">JobProfile: SW engineering</skos:prefLabel>
+    <skos:definition xml:lang="de">SW-Entwicklung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: Software konzipieren, entwickeln und programmieren.</skos:definition>
+    <ns0:mainRequirement rdf:resource="http://akwi.de/ns/bise#PillarCSC"/>
+    <ns0:mainRequirement rdf:resource="http://akwi.de/ns/bise#PillarBIS"/>
+    <ns0:jobMarketShare rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</ns0:jobMarketShare>
+  </ns0:BISEJobProfile>
+
+  <ns0:JobProfile rdf:about="http://akwi.de/ns/bise#JobProfileITM">
+    <skos:prefLabel xml:lang="de">Tätigkeitsprofil: IT-Management</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">JobProfile: IT management</skos:prefLabel>
+    <skos:definition xml:lang="de">IT-Management als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Projekte, IT-Abteilungen, IT-Arbeitsgruppen führen; IT-Strategien entwickeln und umsetzen; IT-Governance verantworten.</skos:definition>
+    <ns0:mainRequirement rdf:resource="http://akwi.de/ns/bise#PillarBAM"/>
+    <ns0:mainRequirement rdf:resource="http://akwi.de/ns/bise#PillarBIS"/>
+    <ns0:jobMarketShare rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</ns0:jobMarketShare>
+  </ns0:JobProfile>
+
+  <schema:CollegeOrUniversity rdf:about="http://akwi.de/ns/bise#THBrandenburg">
+    <skos:prefLabel xml:lang="de">Technische Hochschule Brandenburg</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Brandenburg University of Applied Sciences</skos:prefLabel>
+    <skos:altLabel xml:lang="de">THB</skos:altLabel>
+    <schema:url>http://th-brandenburg.de</schema:url>
+    <schema:location>
+      <schema:Place rdf:about="http://dbpedia.org/resource/Brandenburg_an_der_Havel">
+        <skos:prefLabel xml:lang="de">Brandenburg an der Havel</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Brandenburg at Havel</skos:prefLabel>
+        <schema:geo>
+          <schema:GeoCoordinates>
+            <schema:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.531644</schema:longitude>
+            <schema:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412529</schema:latitude>
+          </schema:GeoCoordinates>
+        </schema:geo>
+
+      </schema:Place>
+    </schema:location>
+
+  </schema:CollegeOrUniversity>
+
+  <schema:CollegeOrUniversity rdf:about="http://akwi.de/ns/bise#OTHRegensburg">
+    <skos:prefLabel xml:lang="de">Ostbayerische Technische Hochschule Regensburg</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Regensburg University of Applied Sciences</skos:prefLabel>
+    <skos:altLabel xml:lang="de">OTHR</skos:altLabel>
+    <schema:url>http://www.oth-regensburg.de</schema:url>
+    <schema:location>
+      <schema:Place rdf:about="http://dbpedia.org/resource/Regensburg">
+        <skos:prefLabel xml:lang="de">Regensburg</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Regensburg</skos:prefLabel>
+        <schema:geo>
+          <schema:GeoCoordinates>
+            <schema:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.071120</schema:longitude>
+            <schema:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49.016578</schema:latitude>
+          </schema:GeoCoordinates>
+        </schema:geo>
+
+      </schema:Place>
+    </schema:location>
+
+  </schema:CollegeOrUniversity>
+
+  <schema:CollegeOrUniversity rdf:about="http://akwi.de/ns/bise#HSFulda">
+    <skos:prefLabel xml:lang="de">Hochschule Fulda</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Fulda University of Applied Sciences</skos:prefLabel>
+    <skos:altLabel xml:lang="de">HSFulda</skos:altLabel>
+    <schema:url>http://hs-fulda.de</schema:url>
+    <schema:location>
+      <schema:Place rdf:about="http://dbpedia.org/resource/Fulda">
+        <skos:prefLabel xml:lang="de">Fulda</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Fulda</skos:prefLabel>
+        <schema:geo>
+          <schema:GeoCoordinates>
+            <schema:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.688638</schema:longitude>
+            <schema:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.564444</schema:latitude>
+          </schema:GeoCoordinates>
+        </schema:geo>
+
+      </schema:Place>
+    </schema:location>
+
+  </schema:CollegeOrUniversity>
+
+</rdf:RDF>
