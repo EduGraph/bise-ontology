@@ -364,7 +364,7 @@ bise:JobProfileSWE		a 						bise:BISEJobProfile ;
 
 ###  http://akwi.de/ns/bise#JobProfileITM
 
-bise:JobProfileITM		a 						bise:JobProfile ;
+bise:JobProfileITM		a 						bise:BISEJobProfile ;
 						skos:prefLabel 			"Tätigkeitsprofil: IT-Management"@de ;
 						skos:prefLabel 			"JobProfile: IT management"@en ;
 						skos:definition 		"IT-Management als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Projekte, IT-Abteilungen, IT-Arbeitsgruppen führen; IT-Strategien entwickeln und umsetzen; IT-Governance verantworten."@de ;
