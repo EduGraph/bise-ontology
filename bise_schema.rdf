@@ -4,11 +4,12 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY schema "http://schema.org/" >
     <!ENTITY bise "http://akwi.de/ns/bise#" >
-    <!ENTITY dbp "http://dbpedia.org/resource/" >
+    <!ENTITY dbr "http://dbpedia.org/resource/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
@@ -18,23 +19,24 @@
      xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:schema="http://schema.org/"
+     xmlns:dbr="http://dbpedia.org/resource/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:bise="http://akwi.de/ns/bise#"
-     xmlns:dbp="http://dbpedia.org/resource/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="http://akwi.de/ns/bise#">
         <rdfs:label xml:lang="de">bise Ontologie</rdfs:label>
-        <dc:date rdf:datatype="&xsd;date">2015-10-27</dc:date>
-        <dc:description>Im Mittelpunkt steht die Klasse für die WI-Studiengänge: BISEDegreeProgram (BISE steht für Business &amp; Information Systems Enginieering – eine übliche englischsprachige Bezeichnung für Wirtschaftsinformatik). Die Wiederverwendung von Standardvokabular-Elementen gilt in der Ontologie-Entwicklung als weithin akzeptierte gute Praxis. Auf dem Gebiet der Annotation von Webseiten ist primär schema.org zu berücksichtigen. Das zentrale Konzept “WI-Studiengang” jedoch ist zu spezifisch und – zumindest zum jetzigen Zeitpunkt – nicht Bestandteil dieses Vokabulars. Leider kennt schema.org aktuell auch kein Konzept „Studiengang“. Deshalb wählten wir zur semantischen Einordnung der zentralen Klasse das generische Konzept Service. In der Tat kann ein Studiengang als ein Dienst angesehen werden, den eine Hochschule anbietet. Das lässt sich in schema.org gut abbilden. Es gibt die Klasse CollegeOrUniversity welche als Range der Object Property provider im Hinblick auf die Klasse BISEDegreeProgram auftritt. Letzere erbt die genannte Property von der übergeordneten Klasse Service. Da wir daran interessiert sind, bestimmte qualitative Eigenschaften von WI-Studiengängen zu explizieren und zu analysieren, im Einzelnen die Ausprägung der WI-Säulen und die Qualifikation für bestimmte Tätigkeitsfelder, brauchen wir zwei weitere spezifische (nicht-Standard) Klassen BISEPillar und BISEJobProfile. Beide sind Unterklassen von schema:QualitativeValue und beide sind mit dem Studiengang über die Standard-Property schema:valueReference verbunden. Die Relation zwischen diesen beiden spezifischen Klassen kann als educationRequirements modelliert werden, einer weiteren Standard-Property aus schema.org. Die Klassifikation als schema:QualitativeValue impliziert einen Enumerationstyp für beide Klassen, d. h. sie verfügen über eine vordefinierte Anzahl von Instanzen (auch Named Individuals genannt), die alle möglichen Ausprägungen des zentralen Dienstes im Hinblick auf eine qualitative Eigenschaft abdecken. Diese vordefinierten Instanzlisten sind zum einen die von der GI definierten Säulen der WI sowie die von der AA publizierten Tätigkeitsfelder für IT-Fachleute. Weitere Elemente der Ontologie sind leicht nachzuvollziehen. Nahezu alle Elemente sind schema.org entnommen.</dc:description>
+        <dc:date rdf:datatype="&xsd;date">2015-12-18</dc:date>
+        <rdfs:comment xml:lang="de">Die BISE Ontologie ist eine Schema-Ontologie (T-Box) für den Studienführer Wirtschaftsinformatik an Fachhochschulen in der DACH-Region (StudyScout). Sie hat zum Ziel die Suche nach geeigneten Studiengängen im Hinblick auf Schwerpunkte des Studiums sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, zu unterstützen. Die Ontologie basiert zu weiten Teilen auf geeigneten Klassen und Properties des schema.org-Vokabulars. Die jeweilige Verwendung der Entitäten im Rahmen des StudyScout wird bei jeder Entität ausgeführt. StudyScout ist aktuell ein Forschungs- und Entwicklungsprojekt an der FH Brandenburg. Es wird unterstützt vom AKWI (Arbeitskreis Wirtschaftsinformatik an Fachhochschulen im deutschsprachigen Raum).	</rdfs:comment>
         <dc:rights>Diese Ontologie unterliegt der Creative Commons Attribuition Licence - http://creativecommons.org/licenses/by/3.0 .</dc:rights>
+        <dc:description>Im Mittelpunkt steht die Klasse für die WI-Studiengänge: BISEDegreeProgram (BISE steht für Business &amp;amp; Information Systems Enginieering – eine übliche englischsprachige Bezeichnung für Wirtschaftsinformatik). Die Wiederverwendung von Standardvokabular-Elementen gilt in der Ontologie-Entwicklung als weithin akzeptierte gute Praxis. Auf dem Gebiet der Annotation von Webseiten ist primär schema.org zu berücksichtigen. Das zentrale Konzept “WI-Studiengang” jedoch ist zu spezifisch und – zumindest zum jetzigen Zeitpunkt – nicht Bestandteil dieses Vokabulars. Leider kennt schema.org aktuell auch kein Konzept „Studiengang“. Deshalb wählten wir zur semantischen Einordnung der zentralen Klasse das generische Konzept Service. In der Tat kann ein Studiengang als ein Dienst angesehen werden, den eine Hochschule anbietet. Das lässt sich in schema.org gut abbilden. Es gibt die Klasse CollegeOrUniversity welche als Range der Object Property provider im Hinblick auf die Klasse BISEDegreeProgram auftritt. Letzere erbt die genannte Property von der übergeordneten Klasse Service. Da wir daran interessiert sind, bestimmte qualitative Eigenschaften von WI-Studiengängen zu explizieren und zu analysieren, im Einzelnen die Ausprägung der WI-Säulen und die Qualifikation für bestimmte Tätigkeitsfelder, brauchen wir zwei weitere spezifische (nicht-Standard) Klassen BISEPillar und BISEJobProfile. Beide sind Unterklassen von schema:QualitativeValue und beide sind mit dem Studiengang über die Standard-Property schema:valueReference verbunden. Die Relation zwischen diesen beiden spezifischen Klassen kann als educationRequirements modelliert werden, einer weiteren Standard-Property aus schema.org. Die Klassifikation als schema:QualitativeValue impliziert einen Enumerationstyp für beide Klassen, d. h. sie verfügen über eine vordefinierte Anzahl von Instanzen (auch Named Individuals genannt), die alle möglichen Ausprägungen des zentralen Dienstes im Hinblick auf eine qualitative Eigenschaft abdecken. Diese vordefinierten Instanzlisten sind zum einen die von der GI definierten Säulen der WI sowie die von der AA publizierten Tätigkeitsfelder für IT-Fachleute. Weitere Elemente der Ontologie sind leicht nachzuvollziehen. Nahezu alle Elemente sind schema.org entnommen.</dc:description>
         <dc:creator>Vera G. Meister</dc:creator>
         <dc:title>BISE Ontologie</dc:title>
-        <rdfs:comment xml:lang="de">Die BISE Ontologie ist eine Schema-Ontologie (T-Box) für den Studienführer Wirtschaftsinformatik an Fachhochschulen in der DACH-Region (StudyScout). Sie hat zum Ziel die Suche nach geeigneten Studiengängen im Hinblick auf Schwerpunkte des Studiums sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, zu unterstützen. Die Ontologie basiert zu weiten Teilen auf geeigneten Klassen und Properties des schema.org-Vokabulars. Die jeweilige Verwendung der Entitäten im Rahmen des StudyScout wird bei jeder Entität ausgeführt. StudyScout ist aktuell ein Forschungs- und Entwicklungsprojekt an der FH Brandenburg. Es wird unterstützt vom AKWI (Arbeitskreis Wirtschaftsinformatik an Fachhochschulen im deutschsprachigen Raum).	</rdfs:comment>
         <skos:prefLabel xml:lang="de">bise-Ontologie</skos:prefLabel>
-        <owl:versionInfo xml:lang="de">v 0.4 - im Vergleich zu v 0.3 Optimierung im Hinblick auf automatische Dokumentation</owl:versionInfo>
+        <owl:versionInfo xml:lang="de">v 0.4 - im Vergleich zu v 0.3 Optimierung im Hinblick auf automatische Dokumentation; geringe Korrekturen im Mapping von Pillars auf JobProfiles</owl:versionInfo>
         <dc:description rdf:resource="https://cloud.githubusercontent.com/assets/12979822/10616550/eafb7f44-7765-11e5-9ec4-1e610bb0978b.png"/>
     </owl:Ontology>
     
@@ -48,18 +50,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://akwi.de/ns/bise#mainRequirement -->
-
-    <owl:AnnotationProperty rdf:about="&bise;mainRequirement"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
-
-    <owl:AnnotationProperty rdf:about="&skos;altLabel"/>
     
 
 
@@ -314,8 +304,8 @@
     <owl:Class rdf:about="&bise;BISEPillar">
         <rdfs:label>BISEPillar</rdfs:label>
         <rdfs:subClassOf rdf:resource="&schema;QualitativeValue"/>
-        <rdfs:comment xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik.</rdfs:comment>
         <skos:definition xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik.</skos:definition>
+        <rdfs:comment xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik. Ein Schwerpunkt eines Studiengangs wird dann impliziert, wenn die Analyse des Modulhandbuchs einen Anteil von mehr als 30 % für die betreffende Säule ergibt.</rdfs:comment>
         <skos:prefLabel xml:lang="de">Säule der Wirtschaftsinformatik</skos:prefLabel>
         <skos:prefLabel xml:lang="en">main subject area of Business &amp; Information Systems Engineering</skos:prefLabel>
     </owl:Class>
@@ -363,12 +353,6 @@
         <skos:prefLabel xml:lang="de">Hochschule</skos:prefLabel>
         <skos:prefLabel xml:lang="en">college or university</skos:prefLabel>
     </owl:Class>
-    
-
-
-    <!-- http://schema.org/GeoCoordinates -->
-
-    <owl:Class rdf:about="&schema;GeoCoordinates"/>
     
 
 
@@ -430,31 +414,14 @@
     
 
 
-    <!-- http://akwi.de/ns/bise#HSFulda -->
-
-    <owl:NamedIndividual rdf:about="&bise;HSFulda">
-        <rdf:type rdf:resource="&schema;CollegeOrUniversity"/>
-        <rdfs:label>HSFulda</rdfs:label>
-        <skos:prefLabel xml:lang="en">Fulda University of Applied Sciences</skos:prefLabel>
-        <schema:url>http://hs-fulda.de</schema:url>
-        <skos:altLabel xml:lang="de">HSFulda</skos:altLabel>
-        <skos:prefLabel xml:lang="de">Hochschule Fulda</skos:prefLabel>
-        <schema:location rdf:resource="&dbp;Fulda"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://akwi.de/ns/bise#JobProfileADM -->
 
     <owl:NamedIndividual rdf:about="&bise;JobProfileADM">
         <rdf:type rdf:resource="&bise;BISEJobProfile"/>
-        <rdfs:label>JobProfileADM</rdfs:label>
         <bise:jobMarketShare rdf:datatype="&xsd;decimal">0.19</bise:jobMarketShare>
-        <rdfs:comment xml:lang="de">Administration als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Netzwerke einrichten und betreuen; die IT von Unternehmen und Organisationen koordinieren und organisieren; IT-Systeme und Web-Anwendungen administrieren; Datenbanken einrichten und administrieren.</rdfs:comment>
         <skos:definition xml:lang="de">Administration als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Netzwerke einrichten und betreuen; die IT von Unternehmen und Organisationen koordinieren und organisieren; IT-Systeme und Web-Anwendungen administrieren; Datenbanken einrichten und administrieren.</skos:definition>
         <skos:prefLabel xml:lang="de">Tätigkeitsprofil: Administration</skos:prefLabel>
         <skos:prefLabel xml:lang="en">JobProfile: administration</skos:prefLabel>
-        <schema:educationRequirements rdf:resource="&bise;PillarBIS"/>
         <schema:educationRequirements rdf:resource="&bise;PillarCSC"/>
     </owl:NamedIndividual>
     
@@ -464,13 +431,10 @@
 
     <owl:NamedIndividual rdf:about="&bise;JobProfileCON">
         <rdf:type rdf:resource="&bise;BISEJobProfile"/>
-        <rdfs:label>JobProfileCON</rdfs:label>
         <bise:jobMarketShare rdf:datatype="&xsd;decimal">0.22</bise:jobMarketShare>
-        <rdfs:comment xml:lang="de">Beratung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Systeme analysieren, Anwender beraten, IT-Produkte vertreiben.</rdfs:comment>
         <skos:definition xml:lang="de">Beratung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Systeme analysieren, Anwender beraten, IT-Produkte vertreiben.</skos:definition>
         <skos:prefLabel xml:lang="de">Tätigkeitsprofil: Beratung</skos:prefLabel>
         <skos:prefLabel xml:lang="en">JobProfile: consulting</skos:prefLabel>
-        <schema:educationRequirements rdf:resource="&bise;PillarBAM"/>
         <schema:educationRequirements rdf:resource="&bise;PillarBIS"/>
     </owl:NamedIndividual>
     
@@ -480,9 +444,7 @@
 
     <owl:NamedIndividual rdf:about="&bise;JobProfileINF">
         <rdf:type rdf:resource="&bise;BISEJobProfile"/>
-        <rdfs:label>JobProfileINF</rdfs:label>
         <bise:jobMarketShare rdf:datatype="&xsd;decimal">0.31</bise:jobMarketShare>
-        <rdfs:comment xml:lang="de">Informatik (i.e.S.) als Tätigkeitsprofil umfasst die folgenden Tätigkeiten: Hard- und Softwarelösungen oder komplexen IT-Systeme konzipieren, erstellen, installieren, betreuen oder erforschen.</rdfs:comment>
         <skos:definition xml:lang="de">Informatik (i.e.S.) als Tätigkeitsprofil umfasst die folgenden Tätigkeiten: Hard- und Softwarelösungen oder komplexen IT-Systeme konzipieren, erstellen, installieren, betreuen oder erforschen.</skos:definition>
         <skos:prefLabel xml:lang="de">Tätigkeitsprofil: Informatik</skos:prefLabel>
         <skos:prefLabel xml:lang="en">JobProfile: informatics</skos:prefLabel>
@@ -495,14 +457,11 @@
 
     <owl:NamedIndividual rdf:about="&bise;JobProfileITM">
         <rdf:type rdf:resource="&bise;BISEJobProfile"/>
-        <rdfs:label>JobProfileITM</rdfs:label>
         <bise:jobMarketShare rdf:datatype="&xsd;decimal">0.03</bise:jobMarketShare>
-        <rdfs:comment xml:lang="de">IT-Management als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Projekte, IT-Abteilungen, IT-Arbeitsgruppen führen; IT-Strategien entwickeln und umsetzen; IT-Governance verantworten.</rdfs:comment>
         <skos:definition xml:lang="de">IT-Management als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Projekte, IT-Abteilungen, IT-Arbeitsgruppen führen; IT-Strategien entwickeln und umsetzen; IT-Governance verantworten.</skos:definition>
         <skos:prefLabel xml:lang="de">Tätigkeitsprofil: IT-Management</skos:prefLabel>
         <skos:prefLabel xml:lang="en">JobProfile: IT management</skos:prefLabel>
-        <bise:mainRequirement rdf:resource="&bise;PillarBAM"/>
-        <bise:mainRequirement rdf:resource="&bise;PillarBIS"/>
+        <schema:educationRequirements rdf:resource="&bise;PillarBAM"/>
     </owl:NamedIndividual>
     
 
@@ -511,28 +470,11 @@
 
     <owl:NamedIndividual rdf:about="&bise;JobProfileSWE">
         <rdf:type rdf:resource="&bise;BISEJobProfile"/>
-        <rdfs:label>JobProfileSWE</rdfs:label>
         <bise:jobMarketShare rdf:datatype="&xsd;decimal">0.25</bise:jobMarketShare>
-        <rdfs:comment xml:lang="de">SW-Entwicklung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: Software konzipieren, entwickeln und programmieren.</rdfs:comment>
         <skos:definition xml:lang="de">SW-Entwicklung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: Software konzipieren, entwickeln und programmieren.</skos:definition>
         <skos:prefLabel xml:lang="de">Tätigkeitsprofil: SW-Entwicklung</skos:prefLabel>
         <skos:prefLabel xml:lang="en">JobProfile: SW engineering</skos:prefLabel>
-        <bise:mainRequirement rdf:resource="&bise;PillarBIS"/>
-        <bise:mainRequirement rdf:resource="&bise;PillarCSC"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://akwi.de/ns/bise#OTHRegensburg -->
-
-    <owl:NamedIndividual rdf:about="&bise;OTHRegensburg">
-        <rdf:type rdf:resource="&schema;CollegeOrUniversity"/>
-        <rdfs:label>OTHRegensburg</rdfs:label>
-        <schema:url>http://www.oth-regensburg.de</schema:url>
-        <skos:altLabel xml:lang="de">OTHR</skos:altLabel>
-        <skos:prefLabel xml:lang="de">Ostbayerische Technische Hochschule Regensburg</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Regensburg University of Applied Sciences</skos:prefLabel>
-        <schema:location rdf:resource="&dbp;Regensburg"/>
+        <schema:educationRequirements rdf:resource="&bise;PillarCSC"/>
     </owl:NamedIndividual>
     
 
@@ -541,9 +483,7 @@
 
     <owl:NamedIndividual rdf:about="&bise;PillarBAM">
         <rdf:type rdf:resource="&bise;BISEPillar"/>
-        <rdfs:label>PillarBAM</rdfs:label>
         <skos:prefLabel xml:lang="de">BWL-Säule</skos:prefLabel>
-        <rdfs:comment xml:lang="de">Die BWL als eine der drei Säulen der Wirtschaftsinformatik.</rdfs:comment>
         <skos:definition xml:lang="de">Die BWL als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
         <skos:prefLabel xml:lang="en">pillar: business administration and management</skos:prefLabel>
     </owl:NamedIndividual>
@@ -554,8 +494,6 @@
 
     <owl:NamedIndividual rdf:about="&bise;PillarBIS">
         <rdf:type rdf:resource="&bise;BISEPillar"/>
-        <rdfs:label>PillarBIS</rdfs:label>
-        <rdfs:comment xml:lang="de">Die genuine Wirtschaftsinformatik als eine der drei Säulen der Wirtschaftsinformatik.</rdfs:comment>
         <skos:definition xml:lang="de">Die genuine Wirtschaftsinformatik als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
         <skos:prefLabel xml:lang="de">WI-Säule</skos:prefLabel>
         <skos:prefLabel xml:lang="en">pillar: proper business &amp; information systems engineering</skos:prefLabel>
@@ -567,79 +505,9 @@
 
     <owl:NamedIndividual rdf:about="&bise;PillarCSC">
         <rdf:type rdf:resource="&bise;BISEPillar"/>
-        <rdfs:label>PillarCSC</rdfs:label>
         <skos:definition xml:lang="de">Die Informatik als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
-        <rdfs:comment xml:lang="de">Die Informatik als eine der drei Säulen der Wirtschaftsinformatik.</rdfs:comment>
         <skos:prefLabel xml:lang="de">Informatik-Säule</skos:prefLabel>
         <skos:prefLabel xml:lang="en">pillar: computer science</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://akwi.de/ns/bise#THBrandenburg -->
-
-    <owl:NamedIndividual rdf:about="&bise;THBrandenburg">
-        <rdf:type rdf:resource="&schema;CollegeOrUniversity"/>
-        <rdfs:label>THBrandenburg</rdfs:label>
-        <skos:altLabel xml:lang="de">THB</skos:altLabel>
-        <schema:url>http://th-brandenburg.de</schema:url>
-        <skos:prefLabel xml:lang="de">Technische Hochschule Brandenburg</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Brandenburg University of Applied Sciences</skos:prefLabel>
-        <schema:location rdf:resource="&dbp;Brandenburg_an_der_Havel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://dbpedia.org/resource/Brandenburg_an_der_Havel -->
-
-    <owl:NamedIndividual rdf:about="&dbp;Brandenburg_an_der_Havel">
-        <rdf:type rdf:resource="&schema;Place"/>
-        <rdfs:label>Brandenburg_an_der_Havel</rdfs:label>
-        <skos:prefLabel xml:lang="de">Brandenburg an der Havel</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Brandenburg at Havel</skos:prefLabel>
-        <schema:geo>
-            <rdf:Description>
-                <rdf:type rdf:resource="&schema;GeoCoordinates"/>
-                <schema:longitude rdf:datatype="&xsd;float">12.531644</schema:longitude>
-                <schema:latitude rdf:datatype="&xsd;float">52.41253</schema:latitude>
-            </rdf:Description>
-        </schema:geo>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://dbpedia.org/resource/Fulda -->
-
-    <owl:NamedIndividual rdf:about="&dbp;Fulda">
-        <rdf:type rdf:resource="&schema;Place"/>
-        <rdfs:label>Fulda</rdfs:label>
-        <skos:prefLabel xml:lang="de">Fulda</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Fulda</skos:prefLabel>
-        <schema:geo>
-            <rdf:Description>
-                <rdf:type rdf:resource="&schema;GeoCoordinates"/>
-                <schema:latitude rdf:datatype="&xsd;float">50.564445</schema:latitude>
-                <schema:longitude rdf:datatype="&xsd;float">9.688638</schema:longitude>
-            </rdf:Description>
-        </schema:geo>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://dbpedia.org/resource/Regensburg -->
-
-    <owl:NamedIndividual rdf:about="&dbp;Regensburg">
-        <rdf:type rdf:resource="&schema;Place"/>
-        <rdfs:label>Regensburg</rdfs:label>
-        <skos:prefLabel xml:lang="de">Regensburg</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Regensburg</skos:prefLabel>
-        <schema:geo>
-            <rdf:Description>
-                <rdf:type rdf:resource="&schema;GeoCoordinates"/>
-                <schema:longitude rdf:datatype="&xsd;float">12.07112</schema:longitude>
-                <schema:latitude rdf:datatype="&xsd;float">49.01658</schema:latitude>
-            </rdf:Description>
-        </schema:geo>
     </owl:NamedIndividual>
 </rdf:RDF>
 

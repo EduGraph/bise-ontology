@@ -1,0 +1,81 @@
+@prefix bise:   <http://akwi.de/ns/bise#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+### Daten des Bachelor-WI-Studiengangs der TH Brandenburg
+bise:WIB-THB a bise:BISEBachelor ;
+    bise:cpECTS 180 ;
+    bise:valueReference bise:PillarBIS ;
+    bise:stPeriodOfStudy "6 Semester" ;
+    schema:name "Bachelor WI - Wirtschaftsinformatik" ;
+    schema:provider <http://fh-brandenburg.de> ;
+    schema:url "http://fbwcms.fh-brandenburg.de/de/5566" .
+    
+bise:CHE_WIB-THB a schema:Rating ;
+    schema:itemReviewed bise:WIB-THB ;
+    schema:ratingValue "Platz 8" .
+
+dbr:Brandenburg_an_der_Havel a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 5.24125e+01 ;
+            schema:longitude 1.25316e+01 ] ;
+    schema:name "Brandenburg an der Havel" .
+
+<http://fh-brandenburg.de> a schema:CollegeOrUniversity ;
+    schema:alternateName "THB" ;
+    schema:location dbr:Brandenburg_an_der_Havel ;
+    schema:name "Technische Hochschule Brandenburg" ;
+    schema:url "http://th-brandenburg.de" .
+    
+    
+### Daten des Bachelor-WI-Studiengangs der Hochschule Fulda
+bise:WIB-HSF a bise:BISEBachelor ;
+    bise:cpECTS 180 ;
+    bise:valueReference bise:PillarBIS ;
+    bise:stPeriodOfStudy "6 Semester" ;
+    schema:name "Wirtschaftsinformatik - Bachelor of Science" ;
+    schema:provider dbr:Fulda_University_of_Applied_Sciences ;
+    schema:url "https://www.hs-fulda.de/fachbereiche/angewandte-informatik/studium/studiengaenge/wirtschaftsinformatik-bsc/" .
+    
+bise:CHE_WIB-HSF a schema:Rating ;
+    schema:itemReviewed bise:WIB-HSF ;
+    schema:ratingValue "Platz 16" .
+
+dbr:Fulda a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 50.550835 ;
+            schema:longitude 9.675278 ] ;
+    schema:name "Fulda" .
+
+dbr:Fulda_University_of_Applied_Sciences a schema:CollegeOrUniversity ;
+    schema:alternateName "HSF" ;
+    schema:location dbr:Fulda ;
+    schema:name "Hochschule Fulda" ;
+    schema:url "http://hs-fulda.de" .
+    
+    
+### Daten des Bachelor-WI-Studiengangs der Ostbayerische Technische Hochschule Regensburg
+bise:WIB-OTHR a bise:BISEBachelor ;
+    bise:cpECTS 210 ;
+    bise:valueReference bise:PillarCSC ;
+    bise:stPeriodOfStudy "7 Semester" ;
+    schema:name "Bachelor Wirtschaftsinformatik" ;
+    schema:provider dbr:OTHRegensburg ;
+    schema:url "https://www.oth-regensburg.de/fakultaeten/informatik-und-mathematik/studiengaenge/bachelor-wirtschaftsinformatik.html" .
+    
+bise:CHE_WIB-OTHR a schema:Rating ;
+    schema:itemReviewed bise:WIB-OTHR ;
+    schema:ratingValue "Platz 4" .
+
+dbr:Regensburg a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 49.016666 ;
+            schema:longitude 12.083333 ] ;
+    schema:name "Regensburg" .
+
+dbr:OTHRegensburg a schema:CollegeOrUniversity ;
+    schema:alternateName "OTHR" ;
+    schema:location dbr:Regensburg ;
+    schema:name "Ostbayerische Hochschule Regensburg" ;
+    schema:url "http://oth-regensburg.de" .
