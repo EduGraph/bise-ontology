@@ -197,7 +197,7 @@ bise:WIB-ZHAW a bise:BISEBachelor ;
 #    schema:itemReviewed bise:WIB-ZHAW ;
 #    schema:ratingValue "Platz x" .
 
-dbr:Zurich a schema:Place ;
+dbr:Z%C3%BCrich a schema:Place ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 4.74999133e+01 ;
             schema:longitude 8.7205223 ] ;
@@ -205,6 +205,6 @@ dbr:Zurich a schema:Place ;
 
 <http://de.dbpedia.org/resource/Zürcher_Hochschule_für_Angewandte_Wissenschaften> a schema:CollegeOrUniversity ;
     schema:alternateName "ZHAW" ;
-    schema:location dbr:Zurich ;
+    schema:location dbr:Z%C3%BCrich ;
     schema:name "Zürcher Hochschule für Angewandte Wissenschaften" ;
     schema:url "http://www.zhaw.ch" .
