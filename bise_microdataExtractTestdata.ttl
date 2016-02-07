@@ -75,7 +75,7 @@ bise:WIB-OTHR a bise:BISEBachelor ;
     
 bise:CHE_WIB-OTHR a schema:Rating ;
     schema:itemReviewed bise:WIB-OTHR ;
-    schema:ratingValue "Platz 4" .
+    schema:ratingValue "Platz 7" .
 
 dbr:Regensburg a schema:Place ;
     schema:geo [ a schema:GeoCoordinates ;
@@ -88,3 +88,125 @@ dbr:OTHRegensburg a schema:CollegeOrUniversity ;
     schema:location dbr:Regensburg ;
     schema:name "Ostbayerische Hochschule Regensburg" ;
     schema:url "http://oth-regensburg.de" .
+    
+    
+### Daten des Bachelor-WI-Studiengangs der FH Flensburg
+bise:WIB-FHFl a bise:BISEBachelor ;
+    bise:cpECTS 180 ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.28" ;
+		bise:pillarBAM "0.25" ;
+		bise:pillarBIS "0.33" ] ;
+    bise:stPeriodOfStudy "6 Semester" ;
+    schema:name "Bachelor WI - Wirtschaftsinformatik" ;
+    schema:provider <http://www.fh-flensburg.de> ;
+    schema:url "https://www.fh-flensburg.de/fhfl/wirtschaftsinformatik0.html" .
+    
+bise:CHE_WIB-FHFl a schema:Rating ;
+    schema:itemReviewed bise:WIB-FHFl ;
+    schema:ratingValue "Platz 38" .
+
+dbr:Flensburg a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 5.477417e+01 ;
+            schema:longitude 9.44939 ] ;
+    schema:name "Flensburg" .
+
+<http://www.fh-flensburg.de> a schema:CollegeOrUniversity ;
+    schema:alternateName "FHFl" ;
+    schema:location dbr:Flensburg ;
+    schema:name "Fachhochschule Flensburg" ;
+    schema:url "http://fh-flensburg.de" .
+    
+    
+    
+### Daten des Bachelor-WI-Studiengangs der TH Köln
+bise:WIB-THK a bise:BISEBachelor ;
+    bise:cpECTS 180 ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.26" ;
+		bise:pillarBAM "0.18" ;
+		bise:pillarBIS "0.39" ] ;
+    bise:stPeriodOfStudy "6 Semester" ;
+    schema:name "Bachelor WI - Wirtschaftsinformatik" ;
+    schema:provider <http://www.th-koeln.de> ;
+    schema:url "https://www.th-koeln.de/studium/wirtschaftsinformatik-bachelor_2770.php" .
+    
+bise:CHE_WIB-THK a schema:Rating ;
+    schema:itemReviewed bise:WIB-THK ;
+    schema:ratingValue "Platz 31" .
+
+dbr:Cologne a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 5.091992e+01 ;
+            schema:longitude 6.96728 ] ;
+    schema:name "Köln" .
+
+<http://www.th-koeln.de> a schema:CollegeOrUniversity ;
+    schema:alternateName "THK" ;
+    schema:location dbr:Cologne ;
+    schema:name "Technische Hochschule Köln" ;
+    schema:url "https://www.th-koeln.de" .
+  
+    
+    
+### Daten des Bachelor-WI-Studiengangs der FH Technikum Wien
+bise:WIB-THK a bise:BISEBachelor ;
+    bise:cpECTS 180 ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.24" ;
+		bise:pillarBAM "0.13" ;
+		bise:pillarBIS "0.44" ] ;
+    bise:stPeriodOfStudy "6 Semester" ;
+    schema:name "Bachelor WI - Wirtschaftsinformatik" ;
+    schema:provider <http://www.technikum-wien.at> ;
+    schema:url "http://www.technikum-wien.at/wirtschaftsinformatik/" .
+    
+bise:CHE_WIB-FHTW a schema:Rating ;
+    schema:itemReviewed bise:WIB-FHTW ;
+    schema:ratingValue "Platz 32" .
+
+dbr:Vienna a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 4.82001415e+01 ;
+            schema:longitude 1.635589e+01 ] ;
+    schema:name "Wien" .
+
+<http://www.technikum-wien.at> a schema:CollegeOrUniversity ;
+    schema:alternateName "FHTW" ;
+    schema:location dbr:Vienna ;
+    schema:name "Fachhochschule Technikum Wien" ;
+    schema:url "http://www.technikum-wien.at" .
+    
+        
+
+### Daten des Bachelor-WI-Studiengangs der ZHAW Zürich
+bise:WIB-ZHAW a bise:BISEBachelor ;
+    bise:cpECTS 180 ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.12" ;
+		bise:pillarBAM "0.32" ;
+		bise:pillarBIS "0.35" ] ;
+    bise:stPeriodOfStudy "6 Semester" ;
+    schema:name "Bachelor WI - Wirtschaftsinformatik" ;
+    schema:provider <http://www.zhaw.ch> ;
+    schema:url "https://www.zhaw.ch/de/sml/studium/bachelor/wirtschaftsinformatik/" .
+    
+#bise:CHE_WIB-ZHAW a schema:Rating ;
+#    schema:itemReviewed bise:WIB-ZHAW ;
+#    schema:ratingValue "Platz x" .
+
+dbr:Zurich a schema:Place ;
+    schema:geo [ a schema:GeoCoordinates ;
+            schema:latitude 4.74999133e+01 ;
+            schema:longitude 8.7205223 ] ;
+    schema:name "Zürich" .
+
+<http://www.zhaw.ch> a schema:CollegeOrUniversity ;
+    schema:alternateName "ZHAW" ;
+    schema:location dbr:Zurich ;
+    schema:name "Zürcher Hochschule für Angewandte Wissenschaften" ;
+    schema:url "http://www.zhaw.ch" .
+    
+              
+    
