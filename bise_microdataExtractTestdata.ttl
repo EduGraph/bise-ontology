@@ -6,7 +6,10 @@
 ### Daten des Bachelor-WI-Studiengangs der TH Brandenburg
 bise:WIB-THB a bise:BISEBachelor ;
     bise:cpECTS 180 ;
-    bise:valueReference bise:PillarBIS ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.23" ;
+		bise:pillarBAM "0.2" ;
+		bise:pillarBIS "0.41" ] ;
     bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
     schema:provider <http://fh-brandenburg.de> ;
@@ -32,8 +35,11 @@ dbr:Brandenburg_an_der_Havel a schema:Place ;
 ### Daten des Bachelor-WI-Studiengangs der Hochschule Fulda
 bise:WIB-HSF a bise:BISEBachelor ;
     bise:cpECTS 180 ;
-    bise:valueReference bise:PillarBIS ;
-    bise:stPeriodOfStudy "6 Semester" ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.28" ;
+		bise:pillarBAM "0.2" ;
+		bise:pillarBIS "0.36" ] ;
+        bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Wirtschaftsinformatik - Bachelor of Science" ;
     schema:provider dbr:Fulda_University_of_Applied_Sciences ;
     schema:url "https://www.hs-fulda.de/fachbereiche/angewandte-informatik/studium/studiengaenge/wirtschaftsinformatik-bsc/" .
@@ -58,7 +64,10 @@ dbr:Fulda_University_of_Applied_Sciences a schema:CollegeOrUniversity ;
 ### Daten des Bachelor-WI-Studiengangs der Ostbayerische Technische Hochschule Regensburg
 bise:WIB-OTHR a bise:BISEBachelor ;
     bise:cpECTS 210 ;
-    bise:valueReference bise:PillarCSC ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+		bise:pillarCSC "0.31" ;
+		bise:pillarBAM "0.12" ;
+		bise:pillarBIS "0.39" ] ;
     bise:stPeriodOfStudy "7 Semester" ;
     schema:name "Bachelor Wirtschaftsinformatik" ;
     schema:provider dbr:OTHRegensburg ;
