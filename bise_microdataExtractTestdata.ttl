@@ -2,6 +2,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dbpedia-de:   <http://de.dbpedia.org/resource/> .
 
 ### Daten des Bachelor-WI-Studiengangs der TH Brandenburg
 bise:WIB-THB a bise:BISEBachelor ;
@@ -12,7 +13,7 @@ bise:WIB-THB a bise:BISEBachelor ;
 		bise:pillarBIS "0.41" ] ;
     bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
-    schema:provider <http://fh-brandenburg.de> ;
+    schema:provider dbpedia-de:Fachhochschule_Brandenburg ;
     schema:url "http://fbwcms.fh-brandenburg.de/de/5566" .
     
 bise:CHE_WIB-THB a schema:Rating ;
@@ -25,7 +26,7 @@ dbr:Brandenburg_an_der_Havel a schema:Place ;
             schema:longitude 1.25316e+01 ] ;
     schema:name "Brandenburg an der Havel" .
 
-<http://fh-brandenburg.de> a schema:CollegeOrUniversity ;
+dbpedia-de:Fachhochschule_Brandenburg a schema:CollegeOrUniversity ;
     schema:alternateName "THB" ;
     schema:location dbr:Brandenburg_an_der_Havel ;
     schema:name "Technische Hochschule Brandenburg" ;
@@ -41,7 +42,7 @@ bise:WIB-HSF a bise:BISEBachelor ;
 		bise:pillarBIS "0.36" ] ;
         bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Wirtschaftsinformatik - Bachelor of Science" ;
-    schema:provider dbr:Fulda_University_of_Applied_Sciences ;
+    schema:provider dbpedia-de:Hochschule_Fulda ;
     schema:url "https://www.hs-fulda.de/fachbereiche/angewandte-informatik/studium/studiengaenge/wirtschaftsinformatik-bsc/" .
     
 bise:CHE_WIB-HSF a schema:Rating ;
@@ -54,7 +55,7 @@ dbr:Fulda a schema:Place ;
             schema:longitude 9.675278 ] ;
     schema:name "Fulda" .
 
-dbr:Fulda_University_of_Applied_Sciences a schema:CollegeOrUniversity ;
+dbpedia-de:Hochschule_Fulda a schema:CollegeOrUniversity ;
     schema:alternateName "HSF" ;
     schema:location dbr:Fulda ;
     schema:name "Hochschule Fulda" ;
@@ -70,7 +71,7 @@ bise:WIB-OTHR a bise:BISEBachelor ;
 		bise:pillarBIS "0.39" ] ;
     bise:stPeriodOfStudy "7 Semester" ;
     schema:name "Bachelor Wirtschaftsinformatik" ;
-    schema:provider dbr:OTHRegensburg ;
+    schema:provider <http://de.dbpedia.org/resource/Ostbayerische_Technische_Hochschule_Regensburg> ;
     schema:url "https://www.oth-regensburg.de/fakultaeten/informatik-und-mathematik/studiengaenge/bachelor-wirtschaftsinformatik.html" .
     
 bise:CHE_WIB-OTHR a schema:Rating ;
@@ -83,7 +84,7 @@ dbr:Regensburg a schema:Place ;
             schema:longitude 12.083333 ] ;
     schema:name "Regensburg" .
 
-dbr:OTHRegensburg a schema:CollegeOrUniversity ;
+<http://de.dbpedia.org/resource/Ostbayerische_Technische_Hochschule_Regensburg> a schema:CollegeOrUniversity ;
     schema:alternateName "OTHR" ;
     schema:location dbr:Regensburg ;
     schema:name "Ostbayerische Hochschule Regensburg" ;
@@ -99,7 +100,7 @@ bise:WIB-FHFl a bise:BISEBachelor ;
 		bise:pillarBIS "0.33" ] ;
     bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
-    schema:provider <http://www.fh-flensburg.de> ;
+    schema:provider dbpedia-de:Fachhochschule_Flensburg ;
     schema:url "https://www.fh-flensburg.de/fhfl/wirtschaftsinformatik0.html" .
     
 bise:CHE_WIB-FHFl a schema:Rating ;
@@ -112,7 +113,7 @@ dbr:Flensburg a schema:Place ;
             schema:longitude 9.44939 ] ;
     schema:name "Flensburg" .
 
-<http://www.fh-flensburg.de> a schema:CollegeOrUniversity ;
+dbpedia-de:Fachhochschule_Flensburg a schema:CollegeOrUniversity ;
     schema:alternateName "FHFl" ;
     schema:location dbr:Flensburg ;
     schema:name "Fachhochschule Flensburg" ;
@@ -129,7 +130,7 @@ bise:WIB-THK a bise:BISEBachelor ;
 		bise:pillarBIS "0.39" ] ;
     bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
-    schema:provider <http://www.th-koeln.de> ;
+    schema:provider dbpedia-de:TH_Köln ;
     schema:url "https://www.th-koeln.de/studium/wirtschaftsinformatik-bachelor_2770.php" .
     
 bise:CHE_WIB-THK a schema:Rating ;
@@ -142,7 +143,7 @@ dbr:Cologne a schema:Place ;
             schema:longitude 6.96728 ] ;
     schema:name "Köln" .
 
-<http://www.th-koeln.de> a schema:CollegeOrUniversity ;
+dbpedia-de:TH_Köln a schema:CollegeOrUniversity ;
     schema:alternateName "THK" ;
     schema:location dbr:Cologne ;
     schema:name "Technische Hochschule Köln" ;
@@ -159,7 +160,7 @@ bise:WIB-THK a bise:BISEBachelor ;
 		bise:pillarBIS "0.44" ] ;
     bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
-    schema:provider <http://www.technikum-wien.at> ;
+    schema:provider dbpedia-de:Fachhochschule_Technikum_Wien ;
     schema:url "http://www.technikum-wien.at/wirtschaftsinformatik/" .
     
 bise:CHE_WIB-FHTW a schema:Rating ;
@@ -172,7 +173,7 @@ dbr:Vienna a schema:Place ;
             schema:longitude 1.635589e+01 ] ;
     schema:name "Wien" .
 
-<http://www.technikum-wien.at> a schema:CollegeOrUniversity ;
+dbpedia-de:Fachhochschule_Technikum_Wien a schema:CollegeOrUniversity ;
     schema:alternateName "FHTW" ;
     schema:location dbr:Vienna ;
     schema:name "Fachhochschule Technikum Wien" ;
@@ -189,7 +190,7 @@ bise:WIB-ZHAW a bise:BISEBachelor ;
 		bise:pillarBIS "0.35" ] ;
     bise:stPeriodOfStudy "6 Semester" ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
-    schema:provider <http://www.zhaw.ch> ;
+    schema:provider <http://de.dbpedia.org/resource/Zürcher_Hochschule_für_Angewandte_Wissenschaften> ;
     schema:url "https://www.zhaw.ch/de/sml/studium/bachelor/wirtschaftsinformatik/" .
     
 #bise:CHE_WIB-ZHAW a schema:Rating ;
@@ -202,11 +203,8 @@ dbr:Zurich a schema:Place ;
             schema:longitude 8.7205223 ] ;
     schema:name "Zürich" .
 
-<http://www.zhaw.ch> a schema:CollegeOrUniversity ;
+<http://de.dbpedia.org/resource/Zürcher_Hochschule_für_Angewandte_Wissenschaften> a schema:CollegeOrUniversity ;
     schema:alternateName "ZHAW" ;
     schema:location dbr:Zurich ;
     schema:name "Zürcher Hochschule für Angewandte Wissenschaften" ;
     schema:url "http://www.zhaw.ch" .
-    
-              
-    
