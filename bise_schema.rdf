@@ -32,11 +32,11 @@
         <dc:date rdf:datatype="&xsd;date">2015-12-18</dc:date>
         <rdfs:comment xml:lang="de">Die BISE Ontologie ist eine Schema-Ontologie (T-Box) für den Studienführer Wirtschaftsinformatik an Fachhochschulen in der DACH-Region (StudyScout). Sie hat zum Ziel die Suche nach geeigneten Studiengängen im Hinblick auf Schwerpunkte des Studiums sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, zu unterstützen. Die Ontologie basiert zu weiten Teilen auf geeigneten Klassen und Properties des schema.org-Vokabulars. Die jeweilige Verwendung der Entitäten im Rahmen des StudyScout wird bei jeder Entität ausgeführt. StudyScout ist aktuell ein Forschungs- und Entwicklungsprojekt an der FH Brandenburg. Es wird unterstützt vom AKWI (Arbeitskreis Wirtschaftsinformatik an Fachhochschulen im deutschsprachigen Raum).	</rdfs:comment>
         <dc:rights>Diese Ontologie unterliegt der Creative Commons Attribuition Licence - http://creativecommons.org/licenses/by/3.0 .</dc:rights>
-        <dc:description>Im Mittelpunkt steht die Klasse für die WI-Studiengänge: BISEDegreeProgram (BISE steht für Business &amp;amp; Information Systems Enginieering – eine übliche englischsprachige Bezeichnung für Wirtschaftsinformatik). Die Wiederverwendung von Standardvokabular-Elementen gilt in der Ontologie-Entwicklung als weithin akzeptierte gute Praxis. Auf dem Gebiet der Annotation von Webseiten ist primär schema.org zu berücksichtigen. Das zentrale Konzept “WI-Studiengang” jedoch ist zu spezifisch und – zumindest zum jetzigen Zeitpunkt – nicht Bestandteil dieses Vokabulars. Leider kennt schema.org aktuell auch kein Konzept „Studiengang“. Deshalb wählten wir zur semantischen Einordnung der zentralen Klasse das generische Konzept Service. In der Tat kann ein Studiengang als ein Dienst angesehen werden, den eine Hochschule anbietet. Das lässt sich in schema.org gut abbilden. Es gibt die Klasse CollegeOrUniversity welche als Range der Object Property provider im Hinblick auf die Klasse BISEDegreeProgram auftritt. Letzere erbt die genannte Property von der übergeordneten Klasse Service. Da wir daran interessiert sind, bestimmte qualitative Eigenschaften von WI-Studiengängen zu explizieren und zu analysieren, im Einzelnen die Ausprägung der WI-Säulen und die Qualifikation für bestimmte Tätigkeitsfelder, brauchen wir zwei weitere spezifische (nicht-Standard) Klassen BISEPillar und BISEJobProfile. Beide sind Unterklassen von schema:QualitativeValue und beide sind mit dem Studiengang über die Standard-Property schema:valueReference verbunden. Die Relation zwischen diesen beiden spezifischen Klassen kann als educationRequirements modelliert werden, einer weiteren Standard-Property aus schema.org. Die Klassifikation als schema:QualitativeValue impliziert einen Enumerationstyp für beide Klassen, d. h. sie verfügen über eine vordefinierte Anzahl von Instanzen (auch Named Individuals genannt), die alle möglichen Ausprägungen des zentralen Dienstes im Hinblick auf eine qualitative Eigenschaft abdecken. Diese vordefinierten Instanzlisten sind zum einen die von der GI definierten Säulen der WI sowie die von der AA publizierten Tätigkeitsfelder für IT-Fachleute. Weitere Elemente der Ontologie sind leicht nachzuvollziehen. Nahezu alle Elemente sind schema.org entnommen.</dc:description>
+        <dc:description>Im Mittelpunkt steht die Klasse für die WI-Studiengänge: BISEDegreeProgram (BISE steht für Business and Information Systems Enginieering – eine übliche englischsprachige Bezeichnung für Wirtschaftsinformatik). Die Wiederverwendung von Standardvokabular-Elementen gilt in der Ontologie-Entwicklung als weithin akzeptierte gute Praxis. Auf dem Gebiet der Annotation von Webseiten ist primär schema.org zu berücksichtigen. Das zentrale Konzept “WI-Studiengang” jedoch ist zu spezifisch und – zumindest zum jetzigen Zeitpunkt – nicht Bestandteil dieses Vokabulars. Leider kennt schema.org aktuell auch kein Konzept „Studiengang“. Deshalb wählten wir zur semantischen Einordnung der zentralen Klasse das generische Konzept Service. In der Tat kann ein Studiengang als ein Dienst angesehen werden, den eine Hochschule anbietet. Das lässt sich in schema.org gut abbilden. Es gibt die Klasse CollegeOrUniversity welche als Range der Object Property provider im Hinblick auf die Klasse BISEDegreeProgram auftritt. Letzere erbt die genannte Property von der übergeordneten Klasse Service. Da wir daran interessiert sind, bestimmte qualitative Eigenschaften von WI-Studiengängen zu explizieren und zu analysieren, im Einzelnen die Ausprägung der WI-Säulen und die Qualifikation für bestimmte Tätigkeitsfelder, brauchen wir drei weitere spezifische (nicht-Standard) Klassen BISEPillarShare, BISEMajor und BISEJobProfile. Die beiden letzteren sind Unterklassen von schema:QualitativeValue und beide sind mit dem Studiengang über die Standard-Property schema:valueReference verbunden. Die Relation zwischen diesen beiden spezifischen Klassen kann als educationRequirements modelliert werden, einer weiteren Standard-Property aus schema.org. Die Klassifikation als schema:QualitativeValue impliziert einen Enumerationstyp für beide Klassen, d. h. sie verfügen über eine vordefinierte Anzahl von Instanzen (auch Named Individuals genannt), die alle möglichen Ausprägungen des zentralen Dienstes im Hinblick auf eine qualitative Eigenschaft abdecken. Diese vordefinierten Instanzlisten sind zum einen die von der GI definierten Säulen der WI sowie die von der AA publizierten Tätigkeitsfelder für IT-Fachleute. Die Klasse BISEPillarShare dient dazu, die Anteile der drei Säulen an einem konkreten Curriculum darstellen zu können. Dafür werden ferner drei proprietäre Datenrelationen pillarCSC, pillarBAM und pillarBIS genutzt, die als zusammengehöriger Block einer Blank Node vom Typ BISEPillarShare zugeordnet werden. Weitere Elemente der Ontologie sind leicht nachzuvollziehen. Nahezu alle Elemente sind schema.org entnommen.</dc:description>
         <dc:creator>Vera G. Meister</dc:creator>
         <dc:title>BISE Ontologie</dc:title>
-        <skos:prefLabel xml:lang="de">bise-Ontologie</skos:prefLabel>
-        <owl:versionInfo xml:lang="de">v 0.4 - im Vergleich zu v 0.3 Optimierung im Hinblick auf automatische Dokumentation; geringe Korrekturen im Mapping von Pillars auf JobProfiles</owl:versionInfo>
+        <skos:prefLabel xml:lang="de">bise Ontologie</skos:prefLabel>
+        <owl:versionInfo xml:lang="de">v 0.5 - im Vergleich zu v 0.4: Änderung der Bezeichnung: alt bise:BISEPillar jetzt bise:BISEMajor. Einführung einer neuen Klasse bise:BISEPillarShare, deren Instanzen als kompakte Blank-Node mit drei zugeordneten Data-Properties für die Anteile der drei Säulen in einem Studiengang den Studiengang in dieser Hinsicht charakterisieren.</owl:versionInfo>
         <dc:description rdf:resource="https://cloud.githubusercontent.com/assets/12979822/10616550/eafb7f44-7765-11e5-9ec4-1e610bb0978b.png"/>
     </owl:Ontology>
     
@@ -84,7 +84,7 @@
         <rdfs:comment xml:lang="de">Objektrelation zur Darstellung des Mappings zwischen einem Tätigkeitsprofil der AA und einer Säule der Wirtschaftsinformatik (nach GI). Die Existenz eines solchen Mappings ist wie folgt zu interpretieren: die adressierte(n) Säule(n) der WI sind Bildungsvoraussetzungen für das betrachtete Tätigkeitsprofil.</rdfs:comment>
         <skos:prefLabel xml:lang="en">educational requirements</skos:prefLabel>
         <rdfs:domain rdf:resource="&bise;BISEJobProfile"/>
-        <rdfs:range rdf:resource="&bise;BISEPillar"/>
+        <rdfs:range rdf:resource="&bise;BISEMajor"/>
     </owl:ObjectProperty>
     
 
@@ -111,6 +111,7 @@
         <rdfs:comment xml:lang="de">Gegenstand der einer spezifizierten Begutachtung (einem Rating oder einem Ranking) unterzogen wurde. Diese Standardrelation wird in dieser Ontologie verwendet, um das Rating/Ranking eines WI-Studiengangs an einer Hochschule darzustellen.</rdfs:comment>
         <skos:prefLabel xml:lang="en">reviewed item</skos:prefLabel>
         <rdfs:domain rdf:resource="&schema;Rating"/>
+        <rdfs:range rdf:resource="&schema;Service"/>
     </owl:ObjectProperty>
     
 
@@ -137,6 +138,7 @@
         <skos:prefLabel xml:lang="de">hat Anbieter</skos:prefLabel>
         <skos:prefLabel xml:lang="en">has provider</skos:prefLabel>
         <rdfs:domain rdf:resource="&bise;DegreeProgram"/>
+        <rdfs:range rdf:resource="&schema;CollegeOrUniversity"/>
     </owl:ObjectProperty>
     
 
@@ -153,6 +155,18 @@
     </owl:ObjectProperty>
     
 
+
+ <!-- http://akwi.de/ns/bise#bisePillar -->
+
+    <owl:ObjectProperty rdf:about="&bise;bisePillar">
+        <rdfs:label>bisePillar</rdfs:label>
+        <rdfs:comment xml:lang="de">Definiert einen leeren Knoten (Container) zur Aufnahme der Anteile der drei Säulen am Curriculum (bise:pillarCSC, bise:pillarBAM und bise:pillarBIS). Damit treten die drei als zusammengehöriges Triple auf. Diese proprietäre Relation wird in dieser Ontologie verwendet, um den/die Schwerpunkt(e) eines Studiengangs zu ermitteln sowie die Anteile der Säulen darzustellen.</rdfs:comment>
+        <skos:prefLabel xml:lang="de">Anteile WI-Säulen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">bise pillar data</skos:prefLabel>
+        <rdfs:domain rdf:resource="&bise;DegreeProgram"/>
+        <rdfs:range rdf:resource="&bise;BISEPillarShare"/>
+    </owl:ObjectProperty>
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -185,6 +199,42 @@
         <rdfs:comment>Dient der Darstellung des Anteils eines Tätigkeitsprofils am Gesamtarbeitsmarkt für Informatiker. Basiert auf Daten der Agentur für Arbeit, Nürnberg.</rdfs:comment>
         <skos:prefLabel xml:lang="en">job market share</skos:prefLabel>
         <rdfs:domain rdf:resource="&bise;BISEJobProfile"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://akwi.de/ns/bise#pillarBAM -->
+
+    <owl:DatatypeProperty rdf:about="&bise;pillarBAM">
+        <rdfs:label>pillarBAM</rdfs:label>
+        <skos:prefLabel xml:lang="de">Anteil der BWL-Säule</skos:prefLabel>
+        <rdfs:comment>Weist den prozentualen Anteil von BWL-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. </rdfs:comment>
+        <skos:prefLabel xml:lang="en">share of the Business Administration pillar</skos:prefLabel>
+        <rdfs:domain rdf:resource="&bise;BISEPillarShare"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://akwi.de/ns/bise#pillarBIS -->
+
+    <owl:DatatypeProperty rdf:about="&bise;pillarBIS">
+        <rdfs:label>pillarBIS</rdfs:label>
+        <skos:prefLabel xml:lang="de">Anteil der reinen WI-Säule</skos:prefLabel>
+        <rdfs:comment>Weist den prozentualen Anteil von reinen WI-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. </rdfs:comment>
+        <skos:prefLabel xml:lang="en">share of the genuine Business Information Systems pillar</skos:prefLabel>
+        <rdfs:domain rdf:resource="&bise;BISEPillarShare"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://akwi.de/ns/bise#pillarCSC -->
+
+    <owl:DatatypeProperty rdf:about="&bise;pillarCSC">
+        <rdfs:label>pillarCSC</rdfs:label>
+        <skos:prefLabel xml:lang="de">Anteil der Informatik-Säule</skos:prefLabel>
+        <rdfs:comment>Weist den prozentualen Anteil von Informatik-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. </rdfs:comment>
+        <skos:prefLabel xml:lang="en">share of the Computer Science pillar</skos:prefLabel>
+        <rdfs:domain rdf:resource="&bise;BISEPillarShare"/>
     </owl:DatatypeProperty>
     
 
@@ -233,6 +283,7 @@
         <skos:definition xml:lang="de">Ein numerischer oder alphanumerischer (klassifizierter) Wert eines im Rahmen eines Ratings begutachteten Gegenstandes.</skos:definition>
         <skos:prefLabel xml:lang="de">Ratingwert</skos:prefLabel>
         <skos:prefLabel xml:lang="en">rating value</skos:prefLabel>
+        <rdfs:domain rdf:resource="&schema;Rating"/>
     </owl:DatatypeProperty>
     
 
@@ -299,15 +350,27 @@
     
 
 
-    <!-- http://akwi.de/ns/bise#BISEPillar -->
+    <!-- http://akwi.de/ns/bise#BISEMajor -->
 
-    <owl:Class rdf:about="&bise;BISEPillar">
-        <rdfs:label>BISEPillar</rdfs:label>
+    <owl:Class rdf:about="&bise;BISEMajor">
+        <rdfs:label>BISEMajor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&schema;QualitativeValue"/>
         <skos:definition xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik.</skos:definition>
-        <rdfs:comment xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik. Ein Schwerpunkt eines Studiengangs wird dann impliziert, wenn die Analyse des Modulhandbuchs einen Anteil von mehr als 30 % für die betreffende Säule ergibt.</rdfs:comment>
-        <skos:prefLabel xml:lang="de">Säule der Wirtschaftsinformatik</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">main subject area of Business &amp; Information Systems Engineering</skos:prefLabel>
+        <rdfs:comment xml:lang="de">Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik. Ein Schwerpunkt eines Studiengangs wird dann impliziert, wenn die Analyse des Modulhandbuchs einen Anteil von mehr als 30 % für die betreffende Säule ergibt. Die Anteile werden über entsprechende proprietäre Datenrelationen ausgegeben, die im Block auf eine Blank Node vom Typ bise:BISEPillarShare angewandt werden.</rdfs:comment>
+        <skos:prefLabel xml:lang="de">Schwerpunkt(e) eines Wirtschaftsinformatik-Studiengangs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Major(s) of a study program of Business and Information Systems Engineering</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://akwi.de/ns/bise#BISEPillarShare -->
+
+    <owl:Class rdf:about="&bise;BISEPillarShare">
+        <rdfs:label>BISEPillarShare</rdfs:label>
+        <skos:definition xml:lang="de">Dreiwertiger Vektor (Triple), der die Anteile eines Studiengangs (Curriculums) an den drei Säulen der Wirtschaftsinformatik ausweist.</skos:definition>
+        <rdfs:comment xml:lang="de">Dreiwertiger Vektor (Triple), der die Anteile eines Studiengangs (Curriculums) an den drei Säulen der Wirtschaftsinformatik ausweist.</rdfs:comment>
+        <skos:prefLabel xml:lang="de">Anteile der WI-Säulen am Curriculum</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">ise pillar shares with respect to curriculum</skos:prefLabel>
     </owl:Class>
     
 
@@ -335,12 +398,6 @@
         <skos:prefLabel xml:lang="de">Studiengang</skos:prefLabel>
         <skos:prefLabel xml:lang="en">degree program</skos:prefLabel>
     </owl:Class>
-    
-
-
-    <!-- http://akwi.de/ns/bise#QualitativeValue -->
-
-    <owl:Class rdf:about="&bise;QualitativeValue"/>
     
 
 
@@ -479,35 +536,35 @@
     
 
 
-    <!-- http://akwi.de/ns/bise#PillarBAM -->
+    <!-- http://akwi.de/ns/bise#MajorBAM -->
 
-    <owl:NamedIndividual rdf:about="&bise;PillarBAM">
-        <rdf:type rdf:resource="&bise;BISEPillar"/>
-        <skos:prefLabel xml:lang="de">BWL-Säule</skos:prefLabel>
-        <skos:definition xml:lang="de">Die BWL als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
-        <skos:prefLabel xml:lang="en">pillar: business administration and management</skos:prefLabel>
+    <owl:NamedIndividual rdf:about="&bise;MajorBAM">
+        <rdf:type rdf:resource="&bise;BISEMajor"/>
+        <skos:prefLabel xml:lang="de">Schwerpunkt BWL</skos:prefLabel>
+        <skos:definition xml:lang="de">Die BWL als eine der drei Säulen der Wirtschaftsinformatik stellt einen Schwerpunkt im Studiengang Wirtschaftsinformatik dar.</skos:definition>
+        <skos:prefLabel xml:lang="en">major business administration and management</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://akwi.de/ns/bise#PillarBIS -->
+    <!-- http://akwi.de/ns/bise#MajorBIS -->
 
-    <owl:NamedIndividual rdf:about="&bise;PillarBIS">
-        <rdf:type rdf:resource="&bise;BISEPillar"/>
-        <skos:definition xml:lang="de">Die genuine Wirtschaftsinformatik als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
-        <skos:prefLabel xml:lang="de">WI-Säule</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">pillar: proper business &amp; information systems engineering</skos:prefLabel>
+    <owl:NamedIndividual rdf:about="&bise;MajorBIS">
+        <rdf:type rdf:resource="&bise;BISEMajor"/>
+        <skos:definition xml:lang="de">Die genuine Wirtschaftsinformatik als eine der drei Säulen der Wirtschaftsinformatik stellt einen Schwerpunkt im Studiengang Wirtschaftsinformatik dar.</skos:definition>
+        <skos:prefLabel xml:lang="de">Schwerpunkt WI</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">major proper business &amp; information systems engineering</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://akwi.de/ns/bise#PillarCSC -->
+    <!-- http://akwi.de/ns/bise#MajorCSC -->
 
-    <owl:NamedIndividual rdf:about="&bise;PillarCSC">
-        <rdf:type rdf:resource="&bise;BISEPillar"/>
-        <skos:definition xml:lang="de">Die Informatik als eine der drei Säulen der Wirtschaftsinformatik.</skos:definition>
-        <skos:prefLabel xml:lang="de">Informatik-Säule</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">pillar: computer science</skos:prefLabel>
+    <owl:NamedIndividual rdf:about="&bise;MajorCSC">
+        <rdf:type rdf:resource="&bise;BISEMajor"/>
+        <skos:definition xml:lang="de">Die Informatik als eine der drei Säulen der Wirtschaftsinformatik stellt einen Schwerpunkt im Studiengang Wirtschaftsinformatik dar.</skos:definition>
+        <skos:prefLabel xml:lang="de">Schwerpunkt Informatik</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">major computer science</skos:prefLabel>
     </owl:NamedIndividual>
 </rdf:RDF>
 

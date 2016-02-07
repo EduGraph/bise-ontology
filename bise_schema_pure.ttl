@@ -153,7 +153,7 @@ bise:pillarBIS a owl:DatatypeProperty ;
 	rdfs:comment "Weist den prozentualen Anteil von reinen WI-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. " ;
 	rdfs:label "pillarBIS" ;
 	rdfs:domain bise:BISEPillarShare ;
-	skos:prefLabel "Anteil der reinen WI-Säule"@de , "share of the genuin Business Information Systems pillar"@en .
+	skos:prefLabel "Anteil der reinen WI-Säule"@de , "share of the genuine Business Information Systems pillar"@en .
 # 
 # http://akwi.de/ns/bise#pillarCSC
 
