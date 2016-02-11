@@ -1,0 +1,1440 @@
+@prefix :      <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:    <http://wikidata.org/entity/> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbpedia-de: <http://de.dbpedia.org/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix bise:  <http://akwi.de/ns/bise#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+dbpedia-de:Technische_Hochschule_Deggendorf
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.829722" ;
+                           schema:longitude  "12.954722"
+                         ] ;
+        schema:location  dbpedia-de:Deggendorf ;
+        schema:name      "Technische Hochschule Deggendorf" ;
+        schema:url       <https://www.th-deg.de/> .
+
+schema:CollegeOrUniversity
+        a                owl:Class ;
+        rdfs:comment     "Eine Hochschule in der DACH-Region ist eine Fachhochschule, eine Universität oder eine andere höhere Bildungseinrichtung. Diese Schema-Ontologie beschränkt sich auf Fachhochschulen in der DACH-Region, die Studiengänge der Wirtschaftsinformatik anbieten"@de ;
+        rdfs:label       "CollegeOrUniversity" ;
+        skos:definition  "Eine Hochschule in der DACH-Region ist eine Fachhochschule, eine Universität oder eine andere höhere Bildungseinrichtung."@de ;
+        skos:prefLabel   "Hochschule"@de , "college or university"@en .
+
+schema:latitude  a       owl:DatatypeProperty ;
+        rdfs:comment     "Referenziert die geografische Breite einer Ressource. Diese Standardrelation wird in dieser Ontologie verwendet, um die Geokoordinaten einer Hochschule darzustellen. Diese Standardrelation wird immer nur in Verbindung mit der Objektrelation schema:geo verwendet."@de ;
+        rdfs:label       "latitude" ;
+        skos:definition  "Die geografische Breite einer Ressource."@de ;
+        skos:prefLabel   "geografische Breite"@de , "latitude"@en .
+
+schema:longitude  a      owl:DatatypeProperty ;
+        rdfs:comment     "Referenziert die geografische Länge einer Ressource. Diese Standardrelation wird in dieser Ontologie verwendet, um die Geokoordinaten einer Hochschule darzustellen. Diese Standardrelation wird immer nur in Verbindung mit der Objektrelation schema:geo verwendet."@de ;
+        rdfs:label       "longitude" ;
+        skos:definition  "Die geografische Länge einer Ressource."@de ;
+        skos:prefLabel   "geografische Länge"@de , "longitude"@en .
+
+schema:geo  a            owl:ObjectProperty ;
+        rdfs:comment     "Definiert einen leeren Knoten (Container) zur Aufnahme der Geodaten: longitude und latitude. Damit treten die beiden als zusammengehöriges Paar auf. Diese Standardrelation wird in dieser Ontologie verwendet, um den Standort des WI-Studiengangs an einer Hochschule zu adressieren."@de ;
+        rdfs:domain      schema:Place ;
+        rdfs:label       "geo" ;
+        skos:definition  "Definiert einen leeren Knoten (Container) zur Aufnahme der Geodaten: longitude und latitude. Damit treten die beiden als zusammengehöriges Paar auf."@de ;
+        skos:prefLabel   "Geodaten"@de , "geo data"@en .
+
+schema:location  a       owl:ObjectProperty ;
+        rdfs:comment     "Der bzw. ein Standort einer Organisation, einer Veranstaltung oder eines Vorgangs. Diese Standardrelation wird in dieser Ontologie verwendet, um den Standort des WI-Studiengangs an einer Hochschule darzustellen."@de ;
+        rdfs:label       "location" ;
+        rdfs:range       schema:Place ;
+        skos:definition  "Der bzw. ein Standort einer Organisation, einer Veranstaltung oder eines Vorgangs."@de ;
+        skos:prefLabel   "Standort"@de , "location"@en .
+
+dbpedia-de:Deggendorf
+        a            schema:Place ;
+        schema:name  "Deggendorf" .
+
+schema:url  a            owl:DatatypeProperty ;
+        rdfs:comment     "Diese Standardrelation wird in dieser Ontologie verwendet, um die Internetseiten der Hochschulen sowie die Angebotswebseiten zu den relevanten Studiengängen zu referenzieren."@de ;
+        rdfs:label       "url" ;
+        skos:definition  "Referenziert eine URL zu einer Ressource. Verweist auf weiterführende Informationen, Dokumente, Zugänge etc."@de ;
+        skos:prefLabel   "URL"@de , "url"@en .
+
+dbpedia-de:Fachhochschule_Wedel
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "53.5781" ;
+                           schema:longitude  "9.72889"
+                         ] ;
+        schema:location  dbpedia-de:Wedel ;
+        schema:name      "Fachhochschule Wedel" ;
+        schema:url       <http://www.fh-wedel.de/> .
+
+dbpedia-de:Wedel  a  schema:Place ;
+        schema:name  "Wedel" .
+
+dbpedia-de:Hochschule_Wismar
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "53.89" ;
+                           schema:longitude  "11.44583333"
+                         ] ;
+        schema:location  dbpedia-de:Wismar ;
+        schema:name      "Hochschule Wismar" ;
+        schema:url       <http://www.hs-wismar.de/> .
+
+dbpedia-de:Wismar  a  schema:Place ;
+        schema:name  "Wismar" .
+
+dbpedia-de:Hochschule_Bremerhaven
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Mainz
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.9967" ;
+                           schema:longitude  "8.27889"
+                         ] ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.9967" ;
+                           schema:longitude  "8.27889"
+                         ] ;
+        schema:location  dbpedia-de:Mainz ;
+        schema:name      "Hochschule Mainz" ;
+        schema:url       <https://www.hs-mainz.de/> .
+
+dbpedia-de:Mainz  a  schema:Place ;
+        schema:name  "Mainz" .
+
+dbpedia-de:Provadis_School_of_International_Management_and_Technology
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "50.0989" ;
+                           schema:longitude  "8.53861"
+                         ] ;
+        schema:location  dbpedia-de:Frankfurt_am_Main ;
+        schema:name      "Provadis School of International Management and Technology" ;
+        schema:url       <https://www.provadis-hochschule.de/> .
+
+dbpedia-de:Frankfurt_am_Main
+        a            schema:Place ;
+        schema:name  "Frankfurt am Main" .
+
+dbpedia-de:Hochschule_Albstadt-Sigmaringen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Landshut
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.5552" ;
+                           schema:longitude  "12.199"
+                         ] ;
+        schema:location  dbpedia-de:Landshut ;
+        schema:name      "Hochschule für angewandte Wissenschaften Landshut" ;
+        schema:url       <http://www.haw-landshut.de/> .
+
+dbpedia-de:Landshut  a  schema:Place ;
+        schema:name  "Landshut" .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Augsburg
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.355277777778" ;
+                           schema:longitude  "10.905"
+                         ] ;
+        schema:location  dbpedia-de:Augsburg ;
+        schema:name      "Hochschule für angewandte Wissenschaften Augsburg" ;
+        schema:url       <http://www.hs-augsburg.de/> .
+
+dbpedia-de:Augsburg  a  schema:Place ;
+        schema:name  "Augsburg" .
+
+dbpedia-de:Hochschule_für_Technik_und_Wirtschaft_Dresden
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Technische_Hochschule_Wildau_(FH)>
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_Technik_und_Wirtschaft_Berlin
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "52.49305556" ;
+                           schema:longitude  "13.52583333"
+                         ] ;
+        schema:location  dbpedia-de:Berlin ;
+        schema:name      "Hochschule für Technik und Wirtschaft Berlin" ;
+        schema:url       <http://www.htw-berlin.de/> .
+
+dbpedia-de:Berlin  a  schema:Place ;
+        schema:name  "Berlin" .
+
+dbpedia-de:Hochschule_Esslingen
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.7381" ;
+                           schema:longitude  "9.31103"
+                         ] ;
+        schema:location  dbpedia-de:Esslingen_am_Neckar ;
+        schema:name      "Hochschule Esslingen" ;
+        schema:url       <http://www.hs-esslingen.de/> .
+
+dbpedia-de:Esslingen_am_Neckar
+        a            schema:Place ;
+        schema:name  "Esslingen am Neckar" .
+
+dbpedia-de:SRH_Hochschule_Heidelberg
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Hochschule_Karlsruhe_–_Technik_und_Wirtschaft>
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.0156" ;
+                           schema:longitude  "8.39083"
+                         ] ;
+        schema:location  dbpedia-de:Karlsruhe ;
+        schema:name      "Hochschule Karlsruhe – Technik und Wirtschaft" ;
+        schema:url       <http://www.hs-karlsruhe.de/> .
+
+dbpedia-de:Karlsruhe  a  schema:Place ;
+        schema:name  "Karlsruhe" .
+
+<http://de.dbpedia.org/resource/Hochschule_Konstanz_Technik,_Wirtschaft_und_Gestaltung>
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "47.667088" ;
+                           schema:longitude  "9.171757"
+                         ] ;
+        schema:location  dbpedia-de:Konstanz ;
+        schema:name      "Hochschule Konstanz Technik, Wirtschaft und Gestaltung" ;
+        schema:url       <http://www.htwg-konstanz.de/> .
+
+dbpedia-de:Konstanz  a  schema:Place ;
+        schema:name  "Konstanz" .
+
+dbpedia-de:Hochschule_Mannheim
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.46955687" ;
+                           schema:longitude  "8.48220706"
+                         ] ;
+        schema:location  dbpedia-de:Mannheim ;
+        schema:name      "Hochschule Mannheim" ;
+        schema:url       <http://www.hs-mannheim.de> .
+
+dbpedia-de:Mannheim  a  schema:Place ;
+        schema:name  "Mannheim" .
+
+dbpedia-de:Hochschule_Pforzheim
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.8785" ;
+                           schema:longitude  "8.71722"
+                         ] ;
+        schema:location  dbpedia-de:Pforzheim ;
+        schema:name      "Hochschule Pforzheim" ;
+        schema:url       <http://www.hs-pforzheim.de> .
+
+dbpedia-de:Pforzheim  a  schema:Place ;
+        schema:name  "Pforzheim" .
+
+dbpedia-de:Hochschule_Reutlingen
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.4826" ;
+                           schema:longitude  "9.18715"
+                         ] ;
+        schema:location  dbpedia-de:Reutlingen ;
+        schema:name      "Hochschule Reutlingen" ;
+        schema:url       <http://www.reutlingen-university.de/> .
+
+dbpedia-de:Reutlingen
+        a            schema:Place ;
+        schema:name  "Reutlingen" .
+
+dbpedia-de:Hochschule_der_Medien
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.7408" ;
+                           schema:longitude  "9.1012"
+                         ] ;
+        schema:location  dbpedia-de:Stuttgart ;
+        schema:name      "Hochschule der Medien" ;
+        schema:url       <http://www.hdm-stuttgart.de/> .
+
+dbpedia-de:Stuttgart  a  schema:Place ;
+        schema:name  "Stuttgart" .
+
+dbpedia-de:Hochschule_Ravensburg-Weingarten
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "47.81416667" ;
+                           schema:longitude  "9.65305556"
+                         ] ;
+        schema:location  <http://de.dbpedia.org/resource/Weingarten_(Württemberg)> ;
+        schema:name      "Hochschule Ravensburg-Weingarten" ;
+        schema:url       <http://www.hs-weingarten.de/> .
+
+<http://de.dbpedia.org/resource/Weingarten_(Württemberg)>
+        a            schema:Place ;
+        schema:name  "Weingarten" .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Ansbach
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.3061" ;
+                           schema:longitude  "10.5672"
+                         ] ;
+        schema:location  dbpedia-de:Ansbach ;
+        schema:name      "Hochschule für angewandte Wissenschaften Ansbach" ;
+        schema:url       <http://www.hs-ansbach.de/> .
+
+dbpedia-de:Ansbach  a  schema:Place ;
+        schema:name  "Ansbach" .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Aschaffenburg
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.97194444" ;
+                           schema:longitude  "9.16138889"
+                         ] ;
+        schema:location  dbpedia-de:Aschaffenburg ;
+        schema:name      "Hochschule für angewandte Wissenschaften Aschaffenburg" ;
+        schema:url       <http://www.h-ab.de> .
+
+dbpedia-de:Aschaffenburg
+        a            schema:Place ;
+        schema:name  "Aschaffenburg" .
+
+dbpedia-de:Hochschule_für_Angewandte_Wissenschaften_Hof
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "50.325" ;
+                           schema:longitude  "11.94"
+                         ] ;
+        schema:location  <http://de.dbpedia.org/resource/Hof_(Saale)> ;
+        schema:name      "Hochschule für Angewandte Wissenschaften Hof" ;
+        schema:url       <http://www.hof-university.de> .
+
+<http://de.dbpedia.org/resource/Hof_(Saale)>
+        a            schema:Place ;
+        schema:name  "Hof" .
+
+dbpedia-de:Technische_Hochschule_Ingolstadt
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.7668" ;
+                           schema:longitude  "11.4318"
+                         ] ;
+        schema:location  dbpedia-de:Ingolstadt ;
+        schema:name      "Technische Hochschule Ingolstadt" ;
+        schema:url       <http://www.thi.de/> .
+
+dbpedia-de:Ingolstadt
+        a            schema:Place ;
+        schema:name  "Ingolstadt" .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_München
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "48.153433333333" ;
+                           schema:longitude  "11.552752777778"
+                         ] ;
+        schema:location  dbpedia-de:München ;
+        schema:name      "Hochschule für angewandte Wissenschaften München" ;
+        schema:url       <http://www.hm.edu/> .
+
+dbpedia-de:München  a  schema:Place ;
+        schema:name  "München" .
+
+dbpedia-de:Technische_Hochschule_Nürnberg_Georg_Simon_Ohm
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.4531" ;
+                           schema:longitude  "11.0924"
+                         ] ;
+        schema:location  dbpedia-de:Nürnberg ;
+        schema:name      "Technische Hochschule Nürnberg Georg Simon Ohm" ;
+        schema:url       <http://www.th-nuernberg.de> .
+
+dbpedia-de:Nürnberg  a  schema:Place ;
+        schema:name  "Nürnberg" .
+
+dbpedia-de:Hochschule_Darmstadt
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.86638889" ;
+                           schema:longitude  "8.63333333"
+                         ] ;
+        schema:location  dbpedia-de:Darmstadt ;
+        schema:name      "Hochschule Darmstadt" ;
+        schema:url       <http://www.h-da.de/> .
+
+dbpedia-de:Darmstadt  a  schema:Place ;
+        schema:name  "Darmstadt" .
+
+dbpedia-de:Frankfurt_University_of_Applied_Sciences
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "50.130333" ;
+                           schema:longitude  "8.692486"
+                         ] ;
+        schema:location  dbpedia-de:Frankfurt_am_Main ;
+        schema:name      "Frankfurt University of Applied Sciences" ;
+        schema:url       <http://frankfurt-university.de/> .
+
+<http://de.dbpedia.org/resource/Frankfurt_School_of_Finance_&_Management>
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "50.1096" ;
+                           schema:longitude  "8.69741"
+                         ] ;
+        schema:location  dbpedia-de:Frankfurt_am_Main ;
+        schema:name      "Frankfurt School of Finance & Management" ;
+        schema:url       <http://www.frankfurt-school.de/> .
+
+dbpedia-de:Fachhochschule_Stralsund
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "54.3394" ;
+                           schema:longitude  "13.0742"
+                         ] ;
+        schema:location  dbpedia-de:Stralsund ;
+        schema:name      "Fachhochschule Stralsund" ;
+        schema:url       <http://www.fh-stralsund.de/> .
+
+dbpedia-de:Stralsund  a  schema:Place ;
+        schema:name  "Stralsund" .
+
+<http://de.dbpedia.org/resource/Hochschule_Emden/Leer>
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "53.3678" ;
+                           schema:longitude  "7.18113"
+                         ] ;
+        schema:location  dbpedia-de:Emden ;
+        schema:name      "Hochschule Emden/Leer" ;
+        schema:url       <http://www.hs-emden-leer.de/> .
+
+dbpedia-de:Emden  a  schema:Place ;
+        schema:name  "Emden" .
+
+dbpedia-de:Hochschule_Hannover
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "52.3536" ;
+                           schema:longitude  "9.72417"
+                         ] ;
+        schema:location  dbpedia-de:Hannover ;
+        schema:name      "Hochschule Hannover" ;
+        schema:url       <http://www.hs-hannover.de/> .
+
+dbpedia-de:Hannover  a  schema:Place ;
+        schema:name  "Hannover" .
+
+dbpedia-de:Fachhochschule_Dortmund
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "51.5063" ;
+                           schema:longitude  "7.45779"
+                         ] ;
+        schema:location  dbpedia-de:Dortmund ;
+        schema:name      "Fachhochschule Dortmund" ;
+        schema:url       <http://www.fh-dortmund.de/> .
+
+dbpedia-de:Dortmund  a  schema:Place ;
+        schema:name  "Dortmund" .
+
+dbpedia-de:Hochschule_Ludwigshafen_am_Rhein
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Trier
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.7681" ;
+                           schema:longitude  "6.62944"
+                         ] ;
+        schema:location  dbpedia-de:Trier ;
+        schema:name      "Hochschule Trier" ;
+        schema:url       <http://www.hochschule-trier.de/> .
+
+dbpedia-de:Trier  a  schema:Place ;
+        schema:name  "Trier" .
+
+dbpedia-de:Hochschule_Worms
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "49.6334" ;
+                           schema:longitude  "8.34433"
+                         ] ;
+        schema:location  dbpedia-de:Worms ;
+        schema:name      "Hochschule Worms" ;
+        schema:url       <http://www.hs-worms.de/> .
+
+dbpedia-de:Worms  a  schema:Place ;
+        schema:name  "Worms" .
+
+dbpedia-de:Fachhochschule_Kiel
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "54.3328" ;
+                           schema:longitude  "10.1803"
+                         ] ;
+        schema:location  dbpedia-de:Kiel ;
+        schema:name      "Fachhochschule Kiel" ;
+        schema:url       <http://www.fh-kiel.de/> .
+
+dbpedia-de:Kiel  a   schema:Place ;
+        schema:name  "Kiel" .
+
+<http://de.dbpedia.org/resource/Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig>
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "51.3142" ;
+                           schema:longitude  "12.3725"
+                         ] ;
+        schema:location  dbpedia-de:Leipzig ;
+        schema:name      "Hochschule für Technik, Wirtschaft und Kultur Leipzig" ;
+        schema:url       <http://www.htwk-leipzig.de/> .
+
+dbpedia-de:Leipzig  a  schema:Place ;
+        schema:name  "Leipzig" .
+
+dbpedia-de:Hochschule_Mittweida
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Westsächsische_Hochschule_Zwickau
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "50.716" ;
+                           schema:longitude  "12.4945"
+                         ] ;
+        schema:location  dbpedia-de:Zwickau ;
+        schema:name      "Westsächsische Hochschule Zwickau" ;
+        schema:url       <http://www.fh-zwickau.de/> .
+
+dbpedia-de:Zwickau  a  schema:Place ;
+        schema:name  "Zwickau" .
+
+dbpedia-de:Hochschule_Nordhausen
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "51.4971" ;
+                           schema:longitude  "10.8098"
+                         ] ;
+        schema:location  dbpedia-de:Nordhausen ;
+        schema:name      "Hochschule Nordhausen" ;
+        schema:url       <http://www.hs-nordhausen.de> .
+
+dbpedia-de:Nordhausen
+        a            schema:Place ;
+        schema:name  "Nordhausen" .
+
+dbpedia-de:Fachhochschule_Schmalkalden
+        a                schema:CollegeOrUniversity ;
+        schema:geo       [ a                 schema:GeoCoordinates ;
+                           schema:latitude   "50.7169" ;
+                           schema:longitude  "10.4647"
+                         ] ;
+        schema:location  dbpedia-de:Schmalkalden ;
+        schema:name      "Fachhochschule Schmalkalden" ;
+        schema:url       <http://www.hs-schmalkalden.de> .
+
+dbpedia-de:Schmalkalden
+        a            schema:Place ;
+        schema:name  "Schmalkalden" .
+
+schema:Place  a          owl:Class ;
+        rdfs:comment     "Ein Place ist Ding, dass eine zu einem gewissen Grade fixierte, physikalische Ausdehnung hat. In dieser Ontology wird diese Klasse für die Abbildung der Hochschulstandorte verwendet."@de ;
+        rdfs:label       "Place" ;
+        skos:definition  "Ein Ding, dass eine zu einem gewissen Grade fixierte, physikalische Ausdehnung hat."@de ;
+        skos:prefLabel   "Ort"@de , "place"@en .
+
+bise:WIB_Hochschule_Mainz
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Mainz ;
+        schema:url            "http:/example.org" .
+
+bise:BISEBachelor  a     owl:Class ;
+        rdfs:comment     "Ein Bachelor-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region."@de ;
+        rdfs:label       "BISEBachelor" ;
+        rdfs:subClassOf  bise:DegreeProgram ;
+        skos:definition  "Ein Bachelor-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region."@de ;
+        skos:prefLabel   "Bachelor Wirtschaftsinformatik"@de , "bachelor in Business & Information Systems Engineering"@en .
+
+bise:BISEPillarShare  a  owl:Class ;
+        rdfs:comment     "Dreiwertiger Vektor (Triple), der die Anteile eines Studiengangs (Curriculums) an den drei Säulen der Wirtschaftsinformatik ausweist."@de ;
+        rdfs:label       "BISEPillarShare" ;
+        skos:definition  "Dreiwertiger Vektor (Triple), der die Anteile eines Studiengangs (Curriculums) an den drei Säulen der Wirtschaftsinformatik ausweist."@de ;
+        skos:prefLabel   "Anteile der WI-Säulen am Curriculum"@de , "bise pillar shares with respect to curriculum"@en .
+
+bise:pillarBAM  a       owl:DatatypeProperty ;
+        rdfs:comment    "Weist den prozentualen Anteil von BWL-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. " ;
+        rdfs:domain     bise:BISEPillarShare ;
+        rdfs:label      "pillarBAM" ;
+        skos:prefLabel  "Anteil der BWL-Säule"@de , "share of the Business Administration pillar"@en .
+
+bise:pillarBIS  a       owl:DatatypeProperty ;
+        rdfs:comment    "Weist den prozentualen Anteil von reinen WI-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. " ;
+        rdfs:domain     bise:BISEPillarShare ;
+        rdfs:label      "pillarBIS" ;
+        skos:prefLabel  "Anteil der reinen WI-Säule"@de , "share of the genuine Business Information Systems pillar"@en .
+
+bise:pillarCSC  a       owl:DatatypeProperty ;
+        rdfs:comment    "Weist den prozentualen Anteil von Informatik-Modulen im Curriculum eines WI-Studiengangs aus. Diese Datenrelation wird immer in Verbindung mit Ressourcen der Klasse bise:BISEPillarShare verwendet, die über die Standardrelation schema:valueReference mit einem WI-Studiengang verbunden ist. " ;
+        rdfs:domain     bise:BISEPillarShare ;
+        rdfs:label      "pillarCSC" ;
+        skos:prefLabel  "Anteil der Informatik-Säule"@de , "share of the Computer Science pillar"@en .
+
+bise:bisePillar  a       owl:ObjectProperty ;
+        rdfs:comment     "Definiert einen leeren Knoten (Container) zur Aufnahme der Anteile der drei Säulen am Curriculum (bise:pillarCSC, bise:pillarBAM und bise:pillarBIS). Damit treten die drei als zusammengehöriges Triple auf. Diese proprietäre Relation wird in dieser Ontologie verwendet, um den/die Schwerpunkt(e) eines Studiengangs zu ermitteln sowie die Anteile der Säulen darzustellen."@de ;
+        rdfs:domain      bise:DegreeProgram ;
+        rdfs:label       "bisePillar" ;
+        rdfs:range       bise:BISEPillarShare ;
+        skos:definition  "Definiert einen leeren Knoten (Container) zur Aufnahme der Anteile der drei Säulen am Curriculum (bise:pillarCSC, bise:pillarBAM und bise:pillarBIS). Damit treten die drei als zusammengehöriges Triple auf."@de ;
+        skos:prefLabel   "Anteile WI-Säulen"@de , "bise pillar data"@en .
+
+bise:cpECTS  a          owl:DatatypeProperty ;
+        rdfs:comment    "Dient der Darstellung der ECTS-Punkte für einen Studiengang." ;
+        rdfs:domain     bise:DegreeProgram ;
+        rdfs:label      "cpECTS" ;
+        skos:prefLabel  "Kreditpunkte nach ECTS"@de , "ECTS credit points"@en .
+
+bise:stPeriodOfStudy  a  owl:DatatypeProperty ;
+        rdfs:comment    "Dient der Darstellung der Regelstudienzeit eines Studiengangs in Semestern." ;
+        rdfs:domain     bise:DegreeProgram ;
+        rdfs:label      "stPeriodOfStudy" ;
+        skos:prefLabel  "Regelstudienzeit"@de , "standard period of study"@en .
+
+schema:provider  a       owl:ObjectProperty ;
+        rdfs:comment     "Objektrelation zwischen einem Dienst und seinem Anbieter, hier zwischen einem Studiengang und der anbietenden Hochschule."@de ;
+        rdfs:domain      bise:DegreeProgram ;
+        rdfs:label       "provider" ;
+        rdfs:range       schema:CollegeOrUniversity ;
+        skos:definition  "Objektrelation zwischen einem Dienst und seinem Anbieter, hier zwischen einem Studiengang und der anbietenden Hochschule."@de ;
+        skos:prefLabel   "hat Anbieter"@de , "has provider"@en .
+
+bise:WIB_Fachhochschule_Schmalkalden
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Schmalkalden ;
+        schema:url            "http:/example.org" .
+
+<http://akwi.de/ns/bise#WIB_Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig>
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       <http://de.dbpedia.org/resource/Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig> ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_Angewandte_Wissenschaften_Hof
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_Angewandte_Wissenschaften_Hof ;
+        schema:url            "http:/example.org" .
+
+<http://akwi.de/ns/bise#WIB_Frankfurt_School_of_Finance_&_Management>
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       <http://de.dbpedia.org/resource/Frankfurt_School_of_Finance_&_Management> ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Technische_Hochschule_Nürnberg_Georg_Simon_Ohm
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Technische_Hochschule_Nürnberg_Georg_Simon_Ohm ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Ravensburg-Weingarten
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Ravensburg-Weingarten ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Frankfurt_University_of_Applied_Sciences
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Frankfurt_University_of_Applied_Sciences ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Technische_Hochschule_Ingolstadt
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Technische_Hochschule_Ingolstadt ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Esslingen
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Esslingen ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Fachhochschule_Stralsund
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Stralsund ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Mannheim
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Mannheim ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Wismar
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Wismar ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_Technik_und_Wirtschaft_Berlin
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_Technik_und_Wirtschaft_Berlin ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_angewandte_Wissenschaften_Aschaffenburg
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Aschaffenburg ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Fachhochschule_Kiel
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Kiel ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Darmstadt
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Darmstadt ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Reutlingen
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Reutlingen ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Pforzheim
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Pforzheim ;
+        schema:url            "http:/example.org" .
+
+<http://akwi.de/ns/bise#WIB_Hochschule_Emden/Leer>
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       <http://de.dbpedia.org/resource/Hochschule_Emden/Leer> ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Westsächsische_Hochschule_Zwickau
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Westsächsische_Hochschule_Zwickau ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Hannover
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Hannover ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_angewandte_Wissenschaften_Ansbach
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Ansbach ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Trier
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Trier ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Worms
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Worms ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_Nordhausen
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_Nordhausen ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_der_Medien
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_der_Medien ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Fachhochschule_Dortmund
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Dortmund ;
+        schema:url            "http:/example.org" .
+
+<http://akwi.de/ns/bise#WIB_Hochschule_Konstanz_Technik,_Wirtschaft_und_Gestaltung>
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       <http://de.dbpedia.org/resource/Hochschule_Konstanz_Technik,_Wirtschaft_und_Gestaltung> ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_angewandte_Wissenschaften_München
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_angewandte_Wissenschaften_München ;
+        schema:url            "http:/example.org" .
+
+<http://akwi.de/ns/bise#WIB_Hochschule_Karlsruhe_–_Technik_und_Wirtschaft>
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       <http://de.dbpedia.org/resource/Hochschule_Karlsruhe_–_Technik_und_Wirtschaft> ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Fachhochschule_Wedel
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Wedel ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_angewandte_Wissenschaften_Augsburg
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Augsburg ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Hochschule_für_angewandte_Wissenschaften_Landshut
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Landshut ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Provadis_School_of_International_Management_and_Technology
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Provadis_School_of_International_Management_and_Technology ;
+        schema:url            "http:/example.org" .
+
+bise:WIB_Technische_Hochschule_Deggendorf
+        a                     bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.49 ;
+                                bise:pillarBIS  0.2 ;
+                                bise:pillarCSC  0.21
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Technische_Hochschule_Deggendorf ;
+        schema:url            "http:/example.org" .
+
+bise:   a                owl:Ontology ;
+        rdfs:comment     "Die BISE Ontologie ist eine Schema-Ontologie (T-Box) für den Studienführer Wirtschaftsinformatik an Fachhochschulen in der DACH-Region (StudyScout). Sie hat zum Ziel die Suche nach geeigneten Studiengängen im Hinblick auf Schwerpunkte des Studiums sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, zu unterstützen. Die Ontologie basiert zu weiten Teilen auf geeigneten Klassen und Properties des schema.org-Vokabulars. Die jeweilige Verwendung der Entitäten im Rahmen des StudyScout wird bei jeder Entität ausgeführt. StudyScout ist aktuell ein Forschungs- und Entwicklungsprojekt an der FH Brandenburg. Es wird unterstützt vom AKWI (Arbeitskreis Wirtschaftsinformatik an Fachhochschulen im deutschsprachigen Raum).\t"@de ;
+        rdfs:label       "bise Ontologie"@de ;
+        dc:creator       "Vera G. Meister" ;
+        dc:date          "2016-02-07"^^xsd:date ;
+        dc:description   "Im Mittelpunkt steht die Klasse für die WI-Studiengänge: BISEDegreeProgram (BISE steht für Business and Information Systems Enginieering – eine übliche englischsprachige Bezeichnung für Wirtschaftsinformatik). Die Wiederverwendung von Standardvokabular-Elementen gilt in der Ontologie-Entwicklung als weithin akzeptierte gute Praxis. Auf dem Gebiet der Annotation von Webseiten ist primär schema.org zu berücksichtigen. Das zentrale Konzept “WI-Studiengang” jedoch ist zu spezifisch und – zumindest zum jetzigen Zeitpunkt – nicht Bestandteil dieses Vokabulars. Leider kennt schema.org aktuell auch kein Konzept „Studiengang“. Deshalb wählten wir zur semantischen Einordnung der zentralen Klasse das generische Konzept Service. In der Tat kann ein Studiengang als ein Dienst angesehen werden, den eine Hochschule anbietet. Das lässt sich in schema.org gut abbilden. Es gibt die Klasse CollegeOrUniversity welche als Range der Object Property provider im Hinblick auf die Klasse BISEDegreeProgram auftritt. Letzere erbt die genannte Property von der übergeordneten Klasse Service. Da wir daran interessiert sind, bestimmte qualitative Eigenschaften von WI-Studiengängen zu explizieren und zu analysieren, im Einzelnen die Ausprägung der WI-Säulen und die Qualifikation für bestimmte Tätigkeitsfelder, brauchen wir drei weitere spezifische (nicht-Standard) Klassen BISEPillarShare, BISEMajor und BISEJobProfile. Die beiden letzteren sind Unterklassen von schema:QualitativeValue und beide sind mit dem Studiengang über die Standard-Property schema:valueReference verbunden. Die Relation zwischen diesen beiden spezifischen Klassen kann als educationRequirements modelliert werden, einer weiteren Standard-Property aus schema.org. Die Klassifikation als schema:QualitativeValue impliziert einen Enumerationstyp für beide Klassen, d. h. sie verfügen über eine vordefinierte Anzahl von Instanzen (auch Named Individuals genannt), die alle möglichen Ausprägungen des zentralen Dienstes im Hinblick auf eine qualitative Eigenschaft abdecken. Diese vordefinierten Instanzlisten sind zum einen die von der GI definierten Säulen der WI sowie die von der AA publizierten Tätigkeitsfelder für IT-Fachleute. Die Klasse BISEPillarShare dient dazu, die Anteile der drei Säulen an einem konkreten Curriculum darstellen zu können. Dafür werden ferner drei proprietäre Datenrelationen pillarCSC, pillarBAM und pillarBIS genutzt, die als zusammengehöriger Block einer Blank Node vom Typ BISEPillarShare zugeordnet werden. Weitere Elemente der Ontologie sind leicht nachzuvollziehen. Nahezu alle Elemente sind schema.org entnommen." ;
+        dc:description   <https://cloud.githubusercontent.com/assets/12979822/10616550/eafb7f44-7765-11e5-9ec4-1e610bb0978b.png> ;
+        dc:rights        "Diese Ontologie unterliegt der Creative Commons Attribuition Licence - http://creativecommons.org/licenses/by/3.0 ." ;
+        dc:title         "BISE Ontologie" ;
+        owl:versionInfo  "v 0.5 - im Vergleich zu v 0.4: Änderung der Bezeichnung: alt bise:BISEPillar jetzt bise:BISEMajor. Einführung einer neuen Klasse bise:BISEPillarShare, deren Instanzen als kompakte Blank-Node mit drei zugeordneten Data-Properties für die Anteile der drei Säulen in einem Studiengang den Studiengang in dieser Hinsicht charakterisieren."@de ;
+        skos:prefLabel   "bise-Ontologie"@de .
+
+skos:prefLabel  a  owl:AnnotationProperty .
+
+skos:definition  a  owl:AnnotationProperty .
+
+schema:educationRequirements
+        a               owl:ObjectProperty ;
+        rdfs:comment    "Objektrelation zur Darstellung des Mappings zwischen einem Tätigkeitsprofil der AA und einer Säule der Wirtschaftsinformatik (nach GI). Die Existenz eines solchen Mappings ist wie folgt zu interpretieren: die adressierte(n) Säule(n) der WI sind Bildungsvoraussetzungen für das betrachtete Tätigkeitsprofil."@de ;
+        rdfs:domain     bise:BISEJobProfile ;
+        rdfs:label      "educationRequirements" ;
+        rdfs:range      bise:BISEMajor ;
+        skos:prefLabel  "Bildungsvoraussetzungen"@de , "educational requirements"@en .
+
+bise:BISEJobProfile  a   owl:Class ;
+        rdfs:comment     "Ein Tätigkeitsprofil ist gekennzeichnet durch eine Gruppe von ähnlichen beruflichen Tätigkeiten, die einer Branche oder einem Fachgebiet zugeordnet werden können. Diese Schema-Ontologie beschränkt sich auf die von der BA für Arbeit klassifizierten Tätigkeitsprofiler (Tätigkeitsprofile) für Informatiker: Informatik, Beratung, IT-Administration, Software-Entwicklung und IT-Management."@de ;
+        rdfs:label       "BISEJobProfile" ;
+        rdfs:subClassOf  schema:QualitativeValue ;
+        skos:definition  "Ein Tätigkeitsprofil ist gekennzeichnet durch eine Gruppe von ähnlichen beruflichen Tätigkeiten, die einer Branche oder einem Fachgebiet zugeordnet werden können."@de ;
+        skos:prefLabel   "Tätigkeitsprofil"@de , "job profile"@en .
+
+bise:BISEMajor  a        owl:Class ;
+        rdfs:comment     "Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik. Ein Schwerpunkt eines Studiengangs wird dann impliziert, wenn die Analyse des Modulhandbuchs einen Anteil von mehr als 30 % für die betreffende Säule ergibt. Die Anteile werden über entsprechende proprietäre Datenrelationen ausgegeben, die im Block auf eine Blank Node vom Typ bise:BISEPillarShare angewandt werden."@de ;
+        rdfs:label       "BISEMajor" ;
+        rdfs:subClassOf  schema:QualitativeValue ;
+        skos:definition  "Die Gesellschaft für Informatik (GI) hat drei Hauptsäulen eines Wirtschaftsinformatik-Studienganges identifiziert: Informatik, BWL und genuine Wirtschaftsinformatik."@de ;
+        skos:prefLabel   "Major(s) of a study program of Business and Information Systems Engineering"@en , "Schwerpunkt(e) eines Wirtschaftsinformatik-Studiengangs"@de .
+
+schema:QualitativeValue
+        a                owl:Class ;
+        rdfs:comment     "Qualitative Werte erlauben die Beurteilung eines Produktes, Dienstes oder einer Entität im Hinblick auf wesentliche Werte oder Nutzungseigenschaften dieser Entität. In dieser Schema-Ontologie stehen Wirtschaftsinformatik-Studiengänge im Fokus. Die von der GI identifizierten drei Säulen der Wirtschaftsinformatik sowie die von der Agentur für Arbeit ausgewiesenen fünf Tätigkeitsprofile für Informatiker (inkl. Wirtschaftsinformatiker) werden als qualitative Werte angesehen. Diese Klassifikation deklariert die Elemente als Enumerationen - was hier offensichtlich passt, da jeweils eine vordefinierte Menge an Instanzen gegeben ist."@de ;
+        rdfs:label       "QualitativeValue" ;
+        skos:definition  "Qualitative Werte erlauben die Beurteilung eines Produktes, Dienstes oder einer Entität im Hinblick auf wesentliche Werte oder Nutzungseigenschaften dieser Entität."@de ;
+        skos:prefLabel   "qualitativer Wert"@de , "qualitative value"@en .
+
+schema:itemReviewed  a   owl:ObjectProperty ;
+        rdfs:comment     "Gegenstand der einer spezifizierten Begutachtung (einem Rating oder einem Ranking) unterzogen wurde. Diese Standardrelation wird in dieser Ontologie verwendet, um das Rating/Ranking eines WI-Studiengangs an einer Hochschule darzustellen."@de ;
+        rdfs:domain      schema:Rating ;
+        rdfs:label       "itemReviewed" ;
+        rdfs:range       schema:Service ;
+        skos:definition  "Gegenstand der einer spezifizierten Begutachtung (einem Rating oder einem Ranking) unterzogen wurde."@de ;
+        skos:prefLabel   "Gegenstand der Begutachtung"@de , "reviewed item"@en .
+
+schema:Rating  a        owl:Class ;
+        rdfs:comment    "Rating" , "In dieser Ontologie wird zunächst nur das CHE-Ranking abgebildet. Die Klasse Rating hat damit zunächst nur ein Individuum, kann aber natürlich bei Bedarf erweitert werden."@de ;
+        rdfs:label      "Rating" ;
+        skos:prefLabel  "Rating"@de , "rating"@en .
+
+schema:Service  a       owl:Class ;
+        rdfs:comment    "Gegenstand dieser Ontologie sind Studiengänge der Wirtschaftsinformatik an Fachhochschulen in der DACH-Region. Diese können als Dienste dieser Einrichtungen angesehen werden."@de ;
+        rdfs:label      "Service" ;
+        skos:prefLabel  "Dienst"@de , "service"@en .
+
+bise:DegreeProgram  a    owl:Class ;
+        rdfs:comment     "Ein Studiengang ist ein komplexes, staatlich geordnetes und akkreditiertes akademisches Ausbildungsprogramm an einer Hochschule. Diese Schema-Ontlogie beschränkt sich auf die Studiengänge Wirtschaftsinformatik Bachelor und Master bzw. auf Studiengänge, die einen Schwerpunkt Wirtschaftsinformatik anbieten."@de ;
+        rdfs:label       "DegreeProgram" ;
+        rdfs:subClassOf  schema:Service ;
+        skos:definition  "Ein Studiengang ist ein komplexes, staatlich geordnetes und akkreditiertes akademisches Ausbildungsprogramm an einer Hochschule."@de ;
+        skos:prefLabel   "Studiengang"@de , "degree program"@en .
+
+schema:valueReference
+        a               owl:ObjectProperty ;
+        rdfs:comment    "Diese Standardrelation wird verwendet, um die Eigenschaften eines Studienganges im Hinblick auf Schwerpunkte des Studiums (hier als Blank Node mit zugeordneten Data-Properties für die Anteile der Säulen) sowie auf Tätigkeitsfelder, für die der Studiengang bevorzugt ausbildet, darzustellen."@de ;
+        rdfs:domain     bise:DegreeProgram ;
+        rdfs:label      "valueReference" ;
+        rdfs:range      schema:QualitativeValue ;
+        skos:prefLabel  "Verweis auf den Wert"@de , "value Reference"@en .
+
+bise:jobMarketShare  a  owl:DatatypeProperty ;
+        rdfs:comment    "Dient der Darstellung des Anteils eines Tätigkeitsprofils am Gesamtarbeitsmarkt für Informatiker. Basiert auf Daten der Agentur für Arbeit, Nürnberg." ;
+        rdfs:domain     bise:BISEJobProfile ;
+        rdfs:label      "jobMarketShare" ;
+        skos:prefLabel  "Anteil am Arbeitsmarkt"@de , "job market share"@en .
+
+schema:ratingValue  a    owl:DatatypeProperty ;
+        rdfs:comment     "Diese Standardrelation wird in dieser Ontologie verwendet, um das Ranking einer Hochschule darzustellen."@de ;
+        rdfs:domain      schema:Rating ;
+        rdfs:label       "ratingValue" ;
+        skos:definition  "Ein numerischer oder alphanumerischer (klassifizierter) Wert eines im Rahmen eines Ratings begutachteten Gegenstandes."@de ;
+        skos:prefLabel   "Ratingwert"@de , "rating value"@en .
+
+bise:BISEMaster  a       owl:Class ;
+        rdfs:comment     "Ein Master-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region."@de ;
+        rdfs:label       "BISEMaster" ;
+        rdfs:subClassOf  bise:DegreeProgram ;
+        skos:definition  "Ein Master-Studiengang Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region."@de ;
+        skos:prefLabel   "Master Wirtschaftsinformatik"@de , "master in Business & Information Systems Engineering"@en .
+
+bise:CSCMasterFocusBISE
+        a                owl:Class ;
+        rdfs:comment     "Ein Master-Studiengang Informatik mit Schwerpunkt Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region."@de ;
+        rdfs:label       "CSCMasterFocusBISE" ;
+        rdfs:subClassOf  bise:DegreeProgram ;
+        skos:definition  "Ein Master-Studiengang Informatik mit Schwerpunkt Wirtschaftsinformatik an einer Fachhochschule in der DACH-Region."@de ;
+        skos:prefLabel   "Master Informatik mit Schwerpunkt Wirtschaftsinformatik"@de , "master in Computer Science with focus on Business & Information Systems Engineering"@en .
+
+bise:JobProfileADM  a                 bise:BISEJobProfile , owl:NamedIndividual ;
+        bise:jobMarketShare           0.19 ;
+        schema:educationRequirements  bise:MajorCSC ;
+        skos:definition               "Administration als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Netzwerke einrichten und betreuen; die IT von Unternehmen und Organisationen koordinieren und organisieren; IT-Systeme und Web-Anwendungen administrieren; Datenbanken einrichten und administrieren."@de ;
+        skos:prefLabel                "Tätigkeitsprofil: Administration"@de , "JobProfile: administration"@en .
+
+bise:MajorCSC  a         bise:BISEMajor , owl:NamedIndividual ;
+        skos:definition  "Die Informatik als eine der drei Säulen der Wirtschaftsinformatik stellt einen Schwerpunkt im Studiengang Wirtschaftsinformatik dar."@de ;
+        skos:prefLabel   "Schwerpunkt Informatik"@de , "major computer science"@en .
+
+bise:JobProfileCON  a                 bise:BISEJobProfile , owl:NamedIndividual ;
+        bise:jobMarketShare           0.22 ;
+        schema:educationRequirements  bise:MajorBIS ;
+        skos:definition               "Beratung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Systeme analysieren, Anwender beraten, IT-Produkte vertreiben."@de ;
+        skos:prefLabel                "Tätigkeitsprofil: Beratung"@de , "JobProfile: consulting"@en .
+
+bise:MajorBIS  a         bise:BISEMajor , owl:NamedIndividual ;
+        skos:definition  "Die genuine Wirtschaftsinformatik als eine der drei Säulen der Wirtschaftsinformatik tellt einen Schwerpunkt im Studiengang Wirtschaftsinformatik dar."@de ;
+        skos:prefLabel   "Schwerpunkt WI"@de , "major genuine business & information systems engineering"@en .
+
+bise:JobProfileINF  a                 bise:BISEJobProfile , owl:NamedIndividual ;
+        bise:jobMarketShare           0.31 ;
+        schema:educationRequirements  bise:MajorCSC ;
+        skos:definition               "Informatik (i.e.S.) als Tätigkeitsprofil umfasst die folgenden Tätigkeiten: Hard- und Softwarelösungen oder komplexen IT-Systeme konzipieren, erstellen, installieren, betreuen oder erforschen."@de ;
+        skos:prefLabel                "Tätigkeitsprofil: Informatik"@de , "JobProfile: informatics"@en .
+
+bise:JobProfileITM  a                 bise:BISEJobProfile , owl:NamedIndividual ;
+        bise:jobMarketShare           0.03 ;
+        schema:educationRequirements  bise:MajorBAM ;
+        skos:definition               "IT-Management als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: IT-Projekte, IT-Abteilungen, IT-Arbeitsgruppen führen; IT-Strategien entwickeln und umsetzen; IT-Governance verantworten."@de ;
+        skos:prefLabel                "Tätigkeitsprofil: IT-Management"@de , "JobProfile: IT management"@en .
+
+bise:MajorBAM  a         bise:BISEMajor , owl:NamedIndividual ;
+        skos:definition  "Die BWL als eine der drei Säulen der Wirtschaftsinformatik stellt einen Schwerpunkt im Studiengang Wirtschaftsinformatik dar."@de ;
+        skos:prefLabel   "Schwerpunkt BWL"@de , "major business administration and management"@en .
+
+bise:JobProfileSWE  a                 bise:BISEJobProfile , owl:NamedIndividual ;
+        bise:jobMarketShare           0.25 ;
+        schema:educationRequirements  bise:MajorCSC ;
+        skos:definition               "SW-Entwicklung als Tätigkeitsprofil für Informatiker umfasst die folgenden Tätigkeiten: Software konzipieren, entwickeln und programmieren."@de ;
+        skos:prefLabel                "Tätigkeitsprofil: SW-Entwicklung"@de , "JobProfile: SW engineering"@en .
+
+dbpedia-de:Hochschule_Fulda
+        a                     schema:CollegeOrUniversity ;
+        schema:alternateName  "HSF" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   50.550835 ;
+                                schema:longitude  9.675278
+                              ] ;
+        schema:location       dbr:Fulda ;
+        schema:name           "Hochschule Fulda" ;
+        schema:url            "http://hs-fulda.de" .
+
+dbr:Fulda  a         schema:Place ;
+        schema:name  "Fulda" .
+
+dbpedia-de:Fachhochschule_Flensburg
+        a                     schema:CollegeOrUniversity ;
+        schema:alternateName  "FHFl" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   5.477417e+01 ;
+                                schema:longitude  9.44939
+                              ] ;
+        schema:location       dbr:Flensburg ;
+        schema:name           "Fachhochschule Flensburg" ;
+        schema:url            "http://fh-flensburg.de" .
+
+dbr:Flensburg  a     schema:Place ;
+        schema:name  "Flensburg" .
+
+dbpedia-de:Fachhochschule_Brandenburg
+        a                     schema:CollegeOrUniversity ;
+        schema:alternateName  "THB" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   5.24125e+01 ;
+                                schema:longitude  1.25316e+01
+                              ] ;
+        schema:location       dbr:Brandenburg_an_der_Havel ;
+        schema:name           "Technische Hochschule Brandenburg" ;
+        schema:url            "http://th-brandenburg.de" .
+
+dbr:Brandenburg_an_der_Havel
+        a            schema:Place ;
+        schema:name  "Brandenburg an der Havel" .
+
+bise:WIB-THB  a               bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.2 ;
+                                bise:pillarBIS  0.41 ;
+                                bise:pillarCSC  0.23
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor WI - Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Brandenburg ;
+        schema:url            "http://fbwcms.fh-brandenburg.de/de/5566" .
+
+bise:WIB-HSF  a               bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.2 ;
+                                bise:pillarBIS  0.36 ;
+                                bise:pillarCSC  0.28
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Wirtschaftsinformatik - Bachelor of Science" ;
+        schema:provider       dbpedia-de:Hochschule_Fulda ;
+        schema:url            "https://www.hs-fulda.de/fachbereiche/angewandte-informatik/studium/studiengaenge/wirtschaftsinformatik-bsc/" .
+
+bise:CHE_WIB-THB  a          schema:Rating ;
+        schema:itemReviewed  bise:WIB-THB ;
+        schema:ratingValue   "Platz 8" .
+
+bise:CHE_WIB-HSF  a          schema:Rating ;
+        schema:itemReviewed  bise:WIB-HSF ;
+        schema:ratingValue   "Platz 16" .
+
+bise:WIB-OTHR  a              bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.12 ;
+                                bise:pillarBIS  0.39 ;
+                                bise:pillarCSC  0.31
+                              ] ;
+        bise:cpECTS           210 ;
+        bise:stPeriodOfStudy  "7 Semester" ;
+        schema:name           "Bachelor Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Ostbayerische_Technische_Hochschule_Regensburg ;
+        schema:url            "https://www.oth-regensburg.de/fakultaeten/informatik-und-mathematik/studiengaenge/bachelor-wirtschaftsinformatik.html" .
+
+dbpedia-de:Ostbayerische_Technische_Hochschule_Regensburg
+        a                     schema:CollegeOrUniversity ;
+        schema:alternateName  "OTHR" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   49.016666 ;
+                                schema:longitude  12.083333
+                              ] ;
+        schema:location       dbr:Regensburg ;
+        schema:name           "Ostbayerische Hochschule Regensburg" ;
+        schema:url            "http://oth-regensburg.de" .
+
+bise:CHE_WIB-OTHR  a         schema:Rating ;
+        schema:itemReviewed  bise:WIB-OTHR ;
+        schema:ratingValue   "Platz 7" .
+
+dbr:Regensburg  a    schema:Place ;
+        schema:name  "Regensburg" .
+
+bise:WIB-FHFl  a              bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.25 ;
+                                bise:pillarBIS  0.33 ;
+                                bise:pillarCSC  0.28
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor WI - Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Flensburg ;
+        schema:url            "https://www.fh-flensburg.de/fhfl/wirtschaftsinformatik0.html" .
+
+bise:CHE_WIB-FHFl  a         schema:Rating ;
+        schema:itemReviewed  bise:WIB-FHFl ;
+        schema:ratingValue   "Platz 38" .
+
+bise:WIB-THK  a               bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.18 ;
+                                bise:pillarBIS  0.39 ;
+                                bise:pillarCSC  0.26
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor WI - Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:TH_Köln ;
+        schema:url            "https://www.th-koeln.de/studium/wirtschaftsinformatik-bachelor_2770.php" .
+
+dbpedia-de:TH_Köln  a         schema:CollegeOrUniversity ;
+        schema:alternateName  "THK" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   5.091992e+01 ;
+                                schema:longitude  6.96728
+                              ] ;
+        schema:location       dbr:Cologne ;
+        schema:name           "Technische Hochschule Köln" ;
+        schema:url            "https://www.th-koeln.de" .
+
+bise:CHE_WIB-THK  a          schema:Rating ;
+        schema:itemReviewed  bise:WIB-THK ;
+        schema:ratingValue   "Platz 31" .
+
+dbr:Cologne  a       schema:Place ;
+        schema:name  "Köln" .
+
+bise:CHE_WIB-FHTW  a         schema:Rating ;
+        schema:itemReviewed  bise:WIB-FHTW ;
+        schema:ratingValue   "Platz 32" .
+
+bise:WIB-FHTW  a              bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.13 ;
+                                bise:pillarBIS  0.44 ;
+                                bise:pillarCSC  0.24
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor WI - Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Fachhochschule_Technikum_Wien ;
+        schema:url            "http://www.technikum-wien.at/wirtschaftsinformatik/" .
+
+dbpedia-de:Fachhochschule_Technikum_Wien
+        a                     schema:CollegeOrUniversity ;
+        schema:alternateName  "FHTW" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   4.82001415e+01 ;
+                                schema:longitude  1.635589e+01
+                              ] ;
+        schema:location       dbr:Vienna ;
+        schema:name           "Fachhochschule Technikum Wien" ;
+        schema:url            "http://www.technikum-wien.at" .
+
+dbr:Vienna  a        schema:Place ;
+        schema:name  "Wien" .
+
+bise:WIB-ZHAW  a              bise:BISEBachelor ;
+        bise:bisePillar       [ a               bise:BISEPillarShare ;
+                                bise:pillarBAM  0.32 ;
+                                bise:pillarBIS  0.35 ;
+                                bise:pillarCSC  0.12
+                              ] ;
+        bise:cpECTS           180 ;
+        bise:stPeriodOfStudy  "6 Semester" ;
+        schema:name           "Bachelor WI - Wirtschaftsinformatik" ;
+        schema:provider       dbpedia-de:Zürcher_Hochschule_für_Angewandte_Wissenschaften ;
+        schema:url            "https://www.zhaw.ch/de/sml/studium/bachelor/wirtschaftsinformatik/" .
+
+dbpedia-de:Zürcher_Hochschule_für_Angewandte_Wissenschaften
+        a                     schema:CollegeOrUniversity ;
+        schema:alternateName  "ZHAW" ;
+        schema:geo            [ a                 schema:GeoCoordinates ;
+                                schema:latitude   4.74999133e+01 ;
+                                schema:longitude  8.7205223
+                              ] ;
+        schema:location       <http://dbpedia.org/resource/Z%C3%BCrich> ;
+        schema:name           "Zürcher Hochschule für Angewandte Wissenschaften" ;
+        schema:url            "http://www.zhaw.ch" .
+
+<http://dbpedia.org/resource/Z%C3%BCrich>
+        a            schema:Place ;
+        schema:name  "Zürich" .
