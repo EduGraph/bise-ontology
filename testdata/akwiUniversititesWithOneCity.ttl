@@ -1,0 +1,85 @@
+<http://de.dbpedia.org/resource/Technische_Hochschule_Wildau_(FH)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Karlsruhe_–_Technik_und_Wirtschaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Esslingen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Ravensburg-Weingarten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Trier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Emden/Leer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Technische_Hochschule_Deggendorf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_angewandte_Wissenschaften_Landshut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Pforzheim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_angewandte_Wissenschaften_Augsburg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_Angewandte_Wissenschaften_Hof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Fachhochschule_Schmalkalden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Frankfurt_University_of_Applied_Sciences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Mannheim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Bremerhaven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Frankfurt_School_of_Finance_&_Management> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Hannover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Provadis_School_of_International_Management_and_Technology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_angewandte_Wissenschaften_Aschaffenburg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/SRH_Hochschule_Heidelberg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Fachhochschule_Dortmund> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_der_Medien> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Konstanz_Technik,_Wirtschaft_und_Gestaltung> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_Technik_und_Wirtschaft_Berlin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Westsächsische_Hochschule_Zwickau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Fachhochschule_Stralsund> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Fachhochschule_Wedel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Albstadt-Sigmaringen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Reutlingen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Mainz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Worms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_angewandte_Wissenschaften_München> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_Technik_und_Wirtschaft_Dresden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Technische_Hochschule_Ingolstadt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Technische_Hochschule_Nürnberg_Georg_Simon_Ohm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_für_angewandte_Wissenschaften_Ansbach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Fachhochschule_Kiel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Wismar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Darmstadt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Ludwigshafen_am_Rhein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Mittweida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
+
+<http://de.dbpedia.org/resource/Hochschule_Nordhausen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
