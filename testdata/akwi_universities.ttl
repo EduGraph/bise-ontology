@@ -1,3 +1,6 @@
+### All AKWI Universities with DBpedia-De Ressource
+
+
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix schema: <http://schema.org/> .
 @prefix dbo:   <http://dbpedia.org/ontology/> .

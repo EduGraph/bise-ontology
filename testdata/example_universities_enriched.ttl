@@ -1,3 +1,8 @@
+### Testdaten
+### auf Basis von example_universities.ttl und angereichert mit DBpedia
+### vgl. Meister, V.G., 2014. Wirtschaftsinformatik an Fachhochschulen: Aufbau von Bachelor-Studiengängen, Leitbilder und Status.
+
+
 @prefix schema: <http://schema.org/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .

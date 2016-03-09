@@ -1,3 +1,5 @@
+### AKWI Universities based on DBpedia-De with only one City.
+
 <http://de.dbpedia.org/resource/Technische_Hochschule_Wildau_(FH)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .
 
 <http://de.dbpedia.org/resource/Hochschule_Karlsruhe_–_Technik_und_Wirtschaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CollegeOrUniversity> .

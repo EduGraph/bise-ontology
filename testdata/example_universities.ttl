@@ -1,3 +1,7 @@
+### Testdaten
+### manuell erstellt auf Basis von durchgeführter Studie
+### vgl. Meister, V.G., 2014. Wirtschaftsinformatik an Fachhochschulen: Aufbau von Bachelor-Studiengängen, Leitbilder und Status.
+
 @prefix bise:   <http://akwi.de/ns/bise#> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +19,7 @@ bise:WIB-THB a bise:BISEBachelor ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
     schema:provider dbpedia-de:Fachhochschule_Brandenburg ;
     schema:url "http://fbwcms.fh-brandenburg.de/de/5566" .
-    
+
 bise:CHE_WIB-THB a schema:Rating ;
     schema:itemReviewed bise:WIB-THB ;
     schema:ratingValue "Platz 8" .
@@ -29,10 +33,10 @@ dbpedia-de:Fachhochschule_Brandenburg a schema:CollegeOrUniversity ;
     schema:name "Technische Hochschule Brandenburg" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 5.24125e+01 ;
-            schema:longitude 1.25316e+01 ] ;    
+            schema:longitude 1.25316e+01 ] ;
     schema:url "http://th-brandenburg.de" .
-    
-    
+
+
 ### Daten des Bachelor-WI-Studiengangs der Hochschule Fulda
 bise:WIB-HSF a bise:BISEBachelor ;
     bise:cpECTS 180 ;
@@ -44,7 +48,7 @@ bise:WIB-HSF a bise:BISEBachelor ;
     schema:name "Wirtschaftsinformatik - Bachelor of Science" ;
     schema:provider dbpedia-de:Hochschule_Fulda ;
     schema:url "https://www.hs-fulda.de/fachbereiche/angewandte-informatik/studium/studiengaenge/wirtschaftsinformatik-bsc/" .
-    
+
 bise:CHE_WIB-HSF a schema:Rating ;
     schema:itemReviewed bise:WIB-HSF ;
     schema:ratingValue "Platz 16" .
@@ -58,10 +62,10 @@ dbpedia-de:Hochschule_Fulda a schema:CollegeOrUniversity ;
     schema:name "Hochschule Fulda" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 50.550835 ;
-            schema:longitude 9.675278 ] ;    
+            schema:longitude 9.675278 ] ;
     schema:url "http://hs-fulda.de" .
-    
-    
+
+
 ### Daten des Bachelor-WI-Studiengangs der Ostbayerische Technische Hochschule Regensburg
 bise:WIB-OTHR a bise:BISEBachelor ;
     bise:cpECTS 210 ;
@@ -73,7 +77,7 @@ bise:WIB-OTHR a bise:BISEBachelor ;
     schema:name "Bachelor Wirtschaftsinformatik" ;
     schema:provider <http://de.dbpedia.org/resource/Ostbayerische_Technische_Hochschule_Regensburg> ;
     schema:url "https://www.oth-regensburg.de/fakultaeten/informatik-und-mathematik/studiengaenge/bachelor-wirtschaftsinformatik.html" .
-    
+
 bise:CHE_WIB-OTHR a schema:Rating ;
     schema:itemReviewed bise:WIB-OTHR ;
     schema:ratingValue "Platz 7" .
@@ -87,10 +91,10 @@ dbr:Regensburg a schema:Place ;
     schema:name "Ostbayerische Hochschule Regensburg" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 49.016666 ;
-            schema:longitude 12.083333 ] ;    
+            schema:longitude 12.083333 ] ;
     schema:url "http://oth-regensburg.de" .
-    
-    
+
+
 ### Daten des Bachelor-WI-Studiengangs der FH Flensburg
 bise:WIB-FHFl a bise:BISEBachelor ;
     bise:cpECTS 180 ;
@@ -102,7 +106,7 @@ bise:WIB-FHFl a bise:BISEBachelor ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
     schema:provider dbpedia-de:Fachhochschule_Flensburg ;
     schema:url "https://www.fh-flensburg.de/fhfl/wirtschaftsinformatik0.html" .
-    
+
 bise:CHE_WIB-FHFl a schema:Rating ;
     schema:itemReviewed bise:WIB-FHFl ;
     schema:ratingValue "Platz 38" .
@@ -116,11 +120,11 @@ dbpedia-de:Fachhochschule_Flensburg a schema:CollegeOrUniversity ;
     schema:name "Fachhochschule Flensburg" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 5.477417e+01 ;
-            schema:longitude 9.44939 ] ;    
+            schema:longitude 9.44939 ] ;
     schema:url "http://fh-flensburg.de" .
-    
-    
-    
+
+
+
 ### Daten des Bachelor-WI-Studiengangs der TH Köln
 bise:WIB-THK a bise:BISEBachelor ;
     bise:cpECTS 180 ;
@@ -132,7 +136,7 @@ bise:WIB-THK a bise:BISEBachelor ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
     schema:provider dbpedia-de:TH_Köln ;
     schema:url "https://www.th-koeln.de/studium/wirtschaftsinformatik-bachelor_2770.php" .
-    
+
 bise:CHE_WIB-THK a schema:Rating ;
     schema:itemReviewed bise:WIB-THK ;
     schema:ratingValue "Platz 31" .
@@ -146,11 +150,11 @@ dbpedia-de:TH_Köln a schema:CollegeOrUniversity ;
     schema:name "Technische Hochschule Köln" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 5.091992e+01 ;
-            schema:longitude 6.96728 ] ;    
+            schema:longitude 6.96728 ] ;
     schema:url "https://www.th-koeln.de" .
-  
-    
-    
+
+
+
 ### Daten des Bachelor-WI-Studiengangs der FH Technikum Wien
 bise:WIB-FHTW a bise:BISEBachelor ;
     bise:cpECTS 180 ;
@@ -162,7 +166,7 @@ bise:WIB-FHTW a bise:BISEBachelor ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
     schema:provider dbpedia-de:Fachhochschule_Technikum_Wien ;
     schema:url "http://www.technikum-wien.at/wirtschaftsinformatik/" .
-    
+
 bise:CHE_WIB-FHTW a schema:Rating ;
     schema:itemReviewed bise:WIB-FHTW ;
     schema:ratingValue "Platz 32" .
@@ -176,10 +180,10 @@ dbpedia-de:Fachhochschule_Technikum_Wien a schema:CollegeOrUniversity ;
     schema:name "Fachhochschule Technikum Wien" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 4.82001415e+01 ;
-            schema:longitude 1.635589e+01 ] ;      
+            schema:longitude 1.635589e+01 ] ;
     schema:url "http://www.technikum-wien.at" .
-    
-        
+
+
 
 ### Daten des Bachelor-WI-Studiengangs der ZHAW Zürich
 bise:WIB-ZHAW a bise:BISEBachelor ;
@@ -192,7 +196,7 @@ bise:WIB-ZHAW a bise:BISEBachelor ;
     schema:name "Bachelor WI - Wirtschaftsinformatik" ;
     schema:provider <http://de.dbpedia.org/resource/Zürcher_Hochschule_für_Angewandte_Wissenschaften> ;
     schema:url "https://www.zhaw.ch/de/sml/studium/bachelor/wirtschaftsinformatik/" .
-    
+
 #bise:CHE_WIB-ZHAW a schema:Rating ;
 #    schema:itemReviewed bise:WIB-ZHAW ;
 #    schema:ratingValue "Platz x" .
@@ -206,5 +210,5 @@ dbr:Z%C3%BCrich a schema:Place ;
     schema:name "Zürcher Hochschule für Angewandte Wissenschaften" ;
     schema:geo [ a schema:GeoCoordinates ;
             schema:latitude 4.74999133e+01 ;
-            schema:longitude 8.7205223 ] ;    
+            schema:longitude 8.7205223 ] ;
     schema:url "http://www.zhaw.ch" .

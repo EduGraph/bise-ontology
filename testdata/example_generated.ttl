@@ -1,3 +1,7 @@
+### Example Data
+### generiert auf Baiss von akwi_universitiesOneCity.ttl &
+### https://github.com/EduGraph/bise-ontology/blob/49f6d45d0be7e25f041f0fd1d3e8467881171797/sparql/exampleDataConstruct.sparql
+
 @prefix :      <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix schema: <http://schema.org/> .
 @prefix dbpedia-de: <http://de.dbpedia.org/resource/> .
