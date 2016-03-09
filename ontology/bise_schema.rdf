@@ -37,7 +37,8 @@
         <dc:title>BISE Ontologie</dc:title>
         <skos:prefLabel xml:lang="de">bise Ontologie</skos:prefLabel>
         <owl:versionInfo xml:lang="de">v 0.5 - im Vergleich zu v 0.4: Änderung der Bezeichnung: alt bise:BISEPillar jetzt bise:BISEMajor. Einführung einer neuen Klasse bise:BISEPillarShare, deren Instanzen als kompakte Blank-Node mit drei zugeordneten Data-Properties für die Anteile der drei Säulen in einem Studiengang den Studiengang in dieser Hinsicht charakterisieren.</owl:versionInfo>
-        <dc:description rdf:resource="https://cloud.githubusercontent.com/assets/12979822/10616550/eafb7f44-7765-11e5-9ec4-1e610bb0978b.png"/>
+        <dc:description rdf:resource="https://cloud.githubusercontent.com/assets/12979822/12887521/3b23d460-ce75-11e5-8d36-e0fd7781bea6.png"/>
+        <!-- Für ein neues Bild wird ein Issue in GitHub angelegt und das Bild in das Kommentarfeld gezogen. Nun erscheint eine URL, die hier hinterlegt werden kann. -->
     </owl:Ontology>
     
 

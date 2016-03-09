@@ -1,5 +1,3 @@
 # bise-ontology
- [Technische Dokumentation](http://www.essepuntato.it/lode/lang=de/https://raw.githubusercontent.com/EduGraph/bise-ontology/master/bise_schema.rdf)
-![biseontology](https://cloud.githubusercontent.com/assets/12979822/10616550/eafb7f44-7765-11e5-9ec4-1e610bb0978b.png)
-
-
+ [Technische Dokumentation](http://www.essepuntato.it/lode/owlapi/lang=de/https://bmake.th-brandenburg.de/services/odoc/edugraph/bise_schema.rdf)
+![biseschema](https://cloud.githubusercontent.com/assets/12979822/12887521/3b23d460-ce75-11e5-8d36-e0fd7781bea6.png)
