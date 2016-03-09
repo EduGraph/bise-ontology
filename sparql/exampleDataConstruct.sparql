@@ -1,0 +1,97 @@
+#QUERY <http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph/query>
+
+PREFIX schema: <http://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX bise:  <http://akwi.de/ns/bise#>
+PREFIX dbpedia-de: <http://de.dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+
+
+CONSTRUCT {
+	?universityURI a schema:CollegeOrUniversity;
+	schema:name ?universityLabel;
+	schema:location ?universityLocationURI;
+	schema:url ?universityHomepage;
+	schema:geo [ a schema:GeoCoordinates ;
+		schema:latitude   ?universityLatitude ;
+	    schema:longitude  ?universityLongitude
+	].
+	
+	?universityLocationURI a schema:Place;
+	schema:name ?universityLocationLabel.
+	
+	
+	?degreeProgram a bise:BISEBachelor ;
+    bise:bisePillar [ a bise:BISEPillarShare ;
+            bise:pillarBAM  0.53 ;
+            bise:pillarBIS  0.15 ;
+            bise:pillarCSC  0.20
+     ] ;
+     bise:cpECTS           180 ;
+     bise:stPeriodOfStudy  "6 Semester" ;
+     schema:name           "Bachelor Wirtschaftsinformatik" ;
+     schema:provider       ?universityURI;
+     schema:url            "http:/example.org" .
+	
+	
+}
+
+WHERE {
+	{
+		SELECT * WHERE {
+			GRAPH <http://fbwsvcdev.fh-brandenburg.de:8080/fuseki/EduGraph/data/universititesOneCity> {
+				{ 
+					SELECT * WHERE {
+						?universityURI  a schema:CollegeOrUniversity
+				
+					}
+					LIMIT 10
+					OFFSET 40
+				}
+
+			}
+		
+			SERVICE <http://de.dbpedia.org/sparql/> {
+				?universityURI rdfs:label ?universityLabel_lang;
+					dbpedia-owl:locationCity ?universityLocationURI;
+					owl:sameAs ?universitySameAs.
+				OPTIONAL { ?universityURI foaf:homepage ?universityHomepage. }
+				FILTER regex(?universitySameAs,'^http://wikidata.org/entity/','i')
+		        BIND(URI(REPLACE(STR(?universitySameAs), "http://", "http://www.")) AS ?universityURIWikidata)
+
+				?universityLocationURI owl:sameAs ?universityLocationURIWikidata.
+				FILTER regex(?universityLocationURIWikidata,'^http://wikidata.org/entity/','i')
+		        BIND(URI(REPLACE(STR(?universityLocationURIWikidata), "http://", "http://www.")) AS ?universityLocationWikiDataURI)
+        		FILTER (LANG(?universityLabel_lang) = "de")
+				BIND (str(?universityLabel_lang) AS ?universityLabel)				
+    		}
+			SERVICE <http://query.wikidata.org/sparql> {
+			    ?universityURIWikidata wdt:P625 ?universityLatLon.
+				BIND(STR(?universityLatLon) AS ?universityLatLonStr)
+				BIND(STRBEFORE(STRAFTER(?universityLatLonStr, "Point("), " ") AS ?universityLatitude)
+				BIND(STRBEFORE(STRAFTER(?universityLatLonStr, " "), ")") AS ?universityLongitude)
+					
+				?universityLocationWikiDataURI rdfs:label ?universityLocation_lang.
+
+				FILTER (LANG(?universityLocation_lang) = "de")
+				BIND (str(?universityLocation_lang) AS ?universityLocationLabel)
+
+			}
+			
+			BIND(IRI(CONCAT("http://akwi.de/ns/bise#WIB_", STRAFTER(str(?universityURI), "http://de.dbpedia.org/resource/"))) AS ?degreeProgram)
+
+		}
+	}
+}

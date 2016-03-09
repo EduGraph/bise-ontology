@@ -1,0 +1,197 @@
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix dbpedia-de: <http://de.dbpedia.org/resource/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bise:  <http://akwi.de/ns/bise#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:    <http://wikidata.org/entity/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dbpedia-de:Fachhochschule_Burgenland
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:FH_Kufstein
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Luzern
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Nordwestschweiz
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Westschweiz
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_Technik_und_Wirtschaft_Berlin
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Bremerhaven
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Technische_Hochschule_Wildau_(FH)>
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Albstadt-Sigmaringen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Esslingen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Furtwangen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:SRH_Hochschule_Heidelberg
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Hochschule_Karlsruhe_–_Technik_und_Wirtschaft>
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Hochschule_Konstanz_Technik,_Wirtschaft_und_Gestaltung>
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Mannheim
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Pforzheim
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Reutlingen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_der_Medien
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Ravensburg-Weingarten
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Ansbach
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Aschaffenburg
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Augsburg
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Technische_Hochschule_Deggendorf
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_Angewandte_Wissenschaften_Hof
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Technische_Hochschule_Ingolstadt
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Landshut
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_München
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Fachhochschule_Rosenheim
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_angewandte_Wissenschaften_Würzburg-Schweinfurt
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Technische_Hochschule_Nürnberg_Georg_Simon_Ohm
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Darmstadt
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Frankfurt_University_of_Applied_Sciences
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Frankfurt_School_of_Finance_&_Management>
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Provadis_School_of_International_Management_and_Technology
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Technische_Hochschule_Mittelhessen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Stralsund
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Wismar
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Nordakademie
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Hochschule_Emden/Leer>
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Hannover
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Jade_Hochschule
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Ostfalia_Hochschule_für_angewandte_Wissenschaften
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_des_Mittelstands
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Westfälische_Hochschule_Gelsenkirchen_Bocholt_Recklinghausen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Dortmund
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Niederrhein
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Bonn-Rhein-Sieg
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Ludwigshafen_am_Rhein
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Mainz
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Trier
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Worms
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Kaiserslautern
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Anhalt
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Harz
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Kiel
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Wedel
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_für_Technik_und_Wirtschaft_Dresden
+        a       schema:CollegeOrUniversity .
+
+<http://de.dbpedia.org/resource/Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig>
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Mittweida
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Westsächsische_Hochschule_Zwickau
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Hochschule_Nordhausen
+        a       schema:CollegeOrUniversity .
+
+dbpedia-de:Fachhochschule_Schmalkalden
+        a       schema:CollegeOrUniversity .
