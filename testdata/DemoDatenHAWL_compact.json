@@ -1,6 +1,4 @@
 [
-  {
-  "@graph": [
     {
       "@id": "http://haw-landshut.de",
       "@type": "http://schema.org/CollegeOrUniversity",
@@ -51,5 +49,4 @@
       }
     }
   ]
-  }
-]
+ 
