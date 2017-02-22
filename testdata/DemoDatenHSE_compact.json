@@ -1,0 +1,53 @@
+{
+  "@graph": [
+    {
+      "@id": "_:ub12bL17C16",
+      "@type": "http://schema.org/GeoCoordinates",
+      "http://schema.org/latitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "48.7433425"
+      },
+      "http://schema.org/longitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "9.32011220000004"
+      }
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#WIB-HSE",
+      "@type": "http://akwi.de/ns/bise#BISEBachelor",
+      "http://akwi.de/ns/bise#cpECTS": 210,
+      "http://akwi.de/ns/bise#stPeriodOfStudy": "7 Semester",
+      "http://schema.org/name": "Bachelor WI - Wirtschaftsinformatik",
+      "http://schema.org/provider": {
+        "@id": "http://hs-esslingen.de"
+      },
+      "http://schema.org/url": "http://www.hs-esslingen.de/de/hochschule/fakultaeten/informationstechnik/studiengaenge/bachelor/wirtschaftsinformatik.html"
+    },
+    {
+      "@id": "http://hs-esslingen.de",
+      "@type": "http://schema.org/CollegeOrUniversity",
+      "http://schema.org/alternateName": "HSE",
+      "http://schema.org/location": {
+        "@id": "http://dbpedia.org/resource/Esslingen"
+      },
+      "http://schema.org/name": "Hochschule Esslingen",
+      "http://schema.org/url": "http://hs-esslingen.de"
+    },
+    {
+      "@id": "http://dbpedia.org/resource/Esslingen",
+      "@type": "http://schema.org/Place",
+      "http://schema.org/geo": {
+        "@id": "_:ub12bL17C16"
+      },
+      "http://schema.org/name": "Esslingen"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#CHE_WIB-HSE",
+      "@type": "http://schema.org/Rating",
+      "http://schema.org/itemReviewed": {
+        "@id": "http://akwi.de/ns/bise#WIB-HSE"
+      },
+      "http://schema.org/ratingValue": "Platz 12"
+    }
+  ]
+}

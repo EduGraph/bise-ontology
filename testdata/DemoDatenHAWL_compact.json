@@ -1,0 +1,53 @@
+{
+  "@graph": [
+    {
+      "@id": "http://haw-landshut.de",
+      "@type": "http://schema.org/CollegeOrUniversity",
+      "http://schema.org/alternateName": "HAWL",
+      "http://schema.org/location": {
+        "@id": "http://dbpedia.org/resource/Landshut"
+      },
+      "http://schema.org/name": "Hochschule Landshut",
+      "http://schema.org/url": "http://haw-landshut.de"
+    },
+    {
+      "@id": "http://dbpedia.org/resource/Landshut",
+      "@type": "http://schema.org/Place",
+      "http://schema.org/geo": {
+        "@id": "_:ub14bL18C16"
+      },
+      "http://schema.org/name": "Landshut"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#CHE_WIB-HAWL",
+      "@type": "http://schema.org/Rating",
+      "http://schema.org/itemReviewed": {
+        "@id": "http://akwi.de/ns/bise#WIB-HAWL"
+      },
+      "http://schema.org/ratingValue": "Platz 5"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#WIB-HAWL",
+      "@type": "http://akwi.de/ns/bise#BISEBachelor",
+      "http://akwi.de/ns/bise#cpECTS": 210,
+      "http://akwi.de/ns/bise#stPeriodOfStudy": "7 Semester",
+      "http://schema.org/name": "Bachelor WI - Wirtschaftsinformatik",
+      "http://schema.org/provider": {
+        "@id": "http://haw-landshut.de"
+      },
+      "http://schema.org/url": "https://www.haw-landshut.de/hochschule/fakultaeten/informatik/studiengaenge/wirtschaftsinformatik-bachelor.html"
+    },
+    {
+      "@id": "_:ub14bL18C16",
+      "@type": "http://schema.org/GeoCoordinates",
+      "http://schema.org/latitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "48.539722"
+      },
+      "http://schema.org/longitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "12.150833"
+      }
+    }
+  ]
+}

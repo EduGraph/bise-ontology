@@ -1,0 +1,53 @@
+{
+  "@graph": [
+    {
+      "@id": "http://hs-mannheim.de",
+      "@type": "http://schema.org/CollegeOrUniversity",
+      "http://schema.org/alternateName": "HSM",
+      "http://schema.org/location": {
+        "@id": "http://dbpedia.org/resource/Mannheim"
+      },
+      "http://schema.org/name": "Hochschule Mannheim",
+      "http://schema.org/url": "http://hs-mannheim.de"
+    },
+    {
+      "@id": "_:ub16bL18C16",
+      "@type": "http://schema.org/GeoCoordinates",
+      "http://schema.org/latitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "49.488888"
+      },
+      "http://schema.org/longitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "8.469167"
+      }
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#CHE_WIB-HSM",
+      "@type": "http://schema.org/Rating",
+      "http://schema.org/itemReviewed": {
+        "@id": "http://akwi.de/ns/bise#WIB-HSM"
+      },
+      "http://schema.org/ratingValue": "Platz 7"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#WIB-HSM",
+      "@type": "http://akwi.de/ns/bise#BISEBachelor",
+      "http://akwi.de/ns/bise#cpECTS": 210,
+      "http://akwi.de/ns/bise#stPeriodOfStudy": "7 Semester",
+      "http://schema.org/name": "Unternehmens- und Wirtschaftsinformatik",
+      "http://schema.org/provider": {
+        "@id": "http://hs-mannheim.de"
+      },
+      "http://schema.org/url": "http://www.hs-mannheim.de/studieninteressierte/studienangebot/bachelorstudiengaenge/unternehmens-und-wirtschaftsinformatik.html"
+    },
+    {
+      "@id": "http://dbpedia.org/resource/Mannheim",
+      "@type": "http://schema.org/Place",
+      "http://schema.org/geo": {
+        "@id": "_:ub16bL18C16"
+      },
+      "http://schema.org/name": "Mannheim"
+    }
+  ]
+}

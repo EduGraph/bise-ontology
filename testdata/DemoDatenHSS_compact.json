@@ -1,0 +1,53 @@
+{
+  "@graph": [
+    {
+      "@id": "http://akwi.de/ns/bise#CHE_WIB-HSS",
+      "@type": "http://schema.org/Rating",
+      "http://schema.org/itemReviewed": {
+        "@id": "http://akwi.de/ns/bise#WIB-HSS"
+      },
+      "http://schema.org/ratingValue": "Platz 18"
+    },
+    {
+      "@id": "_:ub18bL18C16",
+      "@type": "http://schema.org/GeoCoordinates",
+      "http://schema.org/latitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "50.716667"
+      },
+      "http://schema.org/longitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "10.450000"
+      }
+    },
+    {
+      "@id": "http://dbpedia.org/resource/Schmalkalden",
+      "@type": "http://schema.org/Place",
+      "http://schema.org/geo": {
+        "@id": "_:ub18bL18C16"
+      },
+      "http://schema.org/name": "Schmalkalden"
+    },
+    {
+      "@id": "http://hs-schmalkalden.de",
+      "@type": "http://schema.org/CollegeOrUniversity",
+      "http://schema.org/alternateName": "HSS",
+      "http://schema.org/location": {
+        "@id": "http://dbpedia.org/resource/Schmalkalden"
+      },
+      "http://schema.org/name": "Hochschule Schmalkalden",
+      "http://schema.org/url": "http://hs-schmalkalden.de"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#WIB-HSS",
+      "@type": "http://akwi.de/ns/bise#BISEBachelor",
+      "http://akwi.de/ns/bise#cpECTS": 180,
+      "http://akwi.de/ns/bise#stPeriodOfStudy": "6 Semester",
+      "http://schema.org/name": "Wirtschaftsinformatik (B.Sc.)",
+      "http://schema.org/provider": {
+        "@id": "http://hs-schmalkalden.de"
+      },
+      "http://schema.org/url": "http://www.hs-schmalkalden.de/studium/studienangebot-hs-schmalkalden/bachelor-studiengaenge/wirtschaftsinformatik-bsc.html"
+    }
+  ]
+}

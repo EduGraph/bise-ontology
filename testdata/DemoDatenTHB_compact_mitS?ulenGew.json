@@ -1,0 +1,57 @@
+{
+  "@graph": [
+    {
+      "@id": "_:ub22bL8C21",
+      "@type": "http://akwi.de/ns/bise#BISEPillarShare",
+      "http://akwi.de/ns/bise#pillarBAM": "0.2",
+      "http://akwi.de/ns/bise#pillarBIS": "0.41",
+      "http://akwi.de/ns/bise#pillarCSC": "0.23"
+    },
+    {
+      "@id": "_:ub22bL22C16",
+      "@type": "http://schema.org/GeoCoordinates",
+      "http://schema.org/latitude": 52.4125,
+      "http://schema.org/longitude": 12.5316
+    },
+    {
+      "@id": "http://th-brandenburg.de",
+      "@type": "http://schema.org/CollegeOrUniversity",
+      "http://schema.org/alternateName": "THB",
+      "http://schema.org/location": {
+        "@id": "http://dbpedia.org/resource/Brandenburg_an_der_Havel"
+      },
+      "http://schema.org/name": "Technische Hochschule Brandenburg",
+      "http://schema.org/url": "http://th-brandenburg.de"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#WIB-THB",
+      "@type": "http://akwi.de/ns/bise#BISEBachelor",
+      "http://akwi.de/ns/bise#bisePillar": {
+        "@id": "_:ub22bL8C21"
+      },
+      "http://akwi.de/ns/bise#cpECTS": 180,
+      "http://akwi.de/ns/bise#stPeriodOfStudy": "6 Semester",
+      "http://schema.org/name": "Bachelor WI - Wirtschaftsinformatik",
+      "http://schema.org/provider": {
+        "@id": "http://th-brandenburg.de"
+      },
+      "http://schema.org/url": "https://th-brandenburg.de/index.php?id=wirtschaftsinformatik-bsc"
+    },
+    {
+      "@id": "http://dbpedia.org/resource/Brandenburg_an_der_Havel",
+      "@type": "http://schema.org/Place",
+      "http://schema.org/geo": {
+        "@id": "_:ub22bL22C16"
+      },
+      "http://schema.org/name": "Brandenburg an der Havel"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#CHE_WIB-THB",
+      "@type": "http://schema.org/Rating",
+      "http://schema.org/itemReviewed": {
+        "@id": "http://akwi.de/ns/bise#WIB-THB"
+      },
+      "http://schema.org/ratingValue": "Platz 8"
+    }
+  ]
+}

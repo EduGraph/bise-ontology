@@ -1,0 +1,53 @@
+{
+  "@graph": [
+    {
+      "@id": "http://dbpedia.org/resource/Bremerhaven",
+      "@type": "http://schema.org/Place",
+      "http://schema.org/geo": {
+        "@id": "_:ub20bL18C16"
+      },
+      "http://schema.org/name": "Bremerhaven"
+    },
+    {
+      "@id": "_:ub20bL18C16",
+      "@type": "http://schema.org/GeoCoordinates",
+      "http://schema.org/latitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "53.549999"
+      },
+      "http://schema.org/longitude": {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "8.583333"
+      }
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#WIB-HSB",
+      "@type": "http://akwi.de/ns/bise#BISEBachelor",
+      "http://akwi.de/ns/bise#cpECTS": 210,
+      "http://akwi.de/ns/bise#stPeriodOfStudy": "7 Semester",
+      "http://schema.org/name": "Wirtschaftsinformatik Bachelor of Science",
+      "http://schema.org/provider": {
+        "@id": "http://hs-bremerhaven.de"
+      },
+      "http://schema.org/url": "http://www.hs-bremerhaven.de/studienangebot/bachelorstudiengaenge/wirtschaftsinformatik/studiendarstellung/"
+    },
+    {
+      "@id": "http://akwi.de/ns/bise#CHE_WIB-HSB",
+      "@type": "http://schema.org/Rating",
+      "http://schema.org/itemReviewed": {
+        "@id": "http://akwi.de/ns/bise#WIB-HSB"
+      },
+      "http://schema.org/ratingValue": "Platz 24"
+    },
+    {
+      "@id": "http://hs-bremerhaven.de",
+      "@type": "http://schema.org/CollegeOrUniversity",
+      "http://schema.org/alternateName": "HSB",
+      "http://schema.org/location": {
+        "@id": "http://dbpedia.org/resource/Bremerhaven"
+      },
+      "http://schema.org/name": "Hochschule Bremerhaven",
+      "http://schema.org/url": "http://hs-bremerhaven.de"
+    }
+  ]
+}
